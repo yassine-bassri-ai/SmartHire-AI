@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+spacy
+nltk
+transformers
+torch
+sentence-transformers
+pdfplumber
+pymupdf
+mysql-connector-python
+sqlalchemy
+fastapi
+uvicorn
+streamlit
+plotly
