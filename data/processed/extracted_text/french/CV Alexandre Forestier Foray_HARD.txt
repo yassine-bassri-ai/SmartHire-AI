@@ -1,0 +1,63 @@
+CENTRE D’INTÉRET
+- Musique : apprentissage de la batterie en 
+autodidacte
+- Lecture
+- Maths
+SKILLS
+- Anglais : professionnel
+- Espagnol / Japonais : débutant
+Langues
+Logiciels
+- Python : Scikit-Learn / Tensorflow / Panda
+- Matlab
+- R
+- Salesforce
+- Microsoft 365
+- Editing : Davinci Resolve
+TRAVAIL ASSOCIATIF
+Cours particuliers :
+Cours particuliers à des élèves de 6e et 4e
+2018
+Le père Noël est un Rockeur (Président)
+2021 - 2023
+Cette association vise à organiser un concert professionnel
+ caritatif, en décembre, ouvert à tout Nancy. Pour rentrer, le
+s spectateur s donnen t u n joue t e t ce s dernier s son t ensui
+te redistribués aux enfants défavorisés pour Noël par le Seco
+urs Populai re. J ’ai j oué  en t ant que batt eur l ors  du pre
+mier concert et j’ai été président de l’association pour la deuxième an
+année.
+FORMATION
+École des Mines de Nancy
+2021 - 2023
+Machine Learning / Deep Learning / Analyse de données /
+ Probabilités avancées / Statistiques / Résolution d’équation
+s au x dérivée s partielle s / Problème s inverse s / Méthode s de 
+Monte Carlo
+Cours
+J’ai travaillé sur un nouveau modèle mathématique de foules
+ (ie:  modèle  Marcoe  Paulo  de  Thomas  Gasparotto).  Mo
+n travail était d’améliorer le modèle pour qu’il puisse gérer l
+es foules multi-populations. J’ai principalement utilisé Matlab
+ et Latex.
+Projet recherche : Modélisation macroscopique de foules
+multi-population
++33 6 51 11 40 11
+alexandreforestierforaypro@gmail.com
+France : Bourg-en-Bresse
+Alexandre Forestier Foray
+CONTACT
+ ALEXANDRE
+FORESTIER -- FORAY
+Étudiant en ingénierie
+mathématique
+EXPÉRIENCE PROFESSIONNELLE
+Consultant junior chez SpringFive
+ Juin - Décembre 2023
+J’ai travaillé en tant que consultant Salesforce sur un sujet
+ Field Service. Le travail de mon équipe consistait à adapter l
+e modèl e d e donnée s Salesforc e Fiel d Servic e au x besoin s 
+de not re clien t, po ur gér er s es technicie ns de terrai n. J’ ai p
+ris part au projet de son début jusqu’à sa première livraison en d
+décembre.
+Permis de conduire

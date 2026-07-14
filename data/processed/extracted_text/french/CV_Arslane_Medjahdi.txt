@@ -1,0 +1,79 @@
+31000, Toulouse
+@arslane medjahdi
+arslane.medjahdi@gmail.com
+C O N T A C T E Z - M O I
+06 52 53 71 92
+P R O F I L  P E R S O N N E L
+Jeune 
+data 
+scientist 
+de 
+23 
+ans
+ découvrant  le  monde.  Je  suis  curieux
+, autonom e e t désireu x d e m e rend
+re utile. 
+F O R M A T I O N
+Master en Mathématique et Ingénierie pour la Science des
+Données
+Faculté des Sciences et Technologies | 2021 - 2023 | Nancy
+Faculté des Sciences et Technologies | 2020 - 2021 | Nancy
+Faculté des Sciences et Technologies | 2018 - 2020 | Nancy
+Master en partenariat avec l'Ecole des Mines et Telecom Nancy
+Fouille de données et Extraction de connaissance, Visualisation
+de données, Intelligence Artificielle, Apprentissage supervisé.
+L3 Mathématiques et Applications
+Algèbre linéaire appliquée, Statistiques et Probabilités, Analyse.
+CPU Mathématiques Physique et Informatique
+Licence de mathématique renforcée, complément en physique et
+en informatique.
+E X P É R I E N C E  P R O F E S S I O N N E L L E
+E T  S T A G E
+Analyse de données expérimentales lors d'études de maté
+matériaux ferromagnétiques et présentation des résultats
+Mars 2021
+Stage | Laboratoire GREEN 
+Recherche et Développement d'un CNN hiérarchique pour la s
+segmentation sémantique des sols
+Implémentation de Vision Transformers à l’aide de la librairie 
+HuggingFace
+Avril 2023 à Septembre 2023
+Stage | CLS Toulouse 
+C E N T R E  D ' I N T E R E T
+E T  L O I S I R
+Volley Ball
+Lecture
+Wwoofing
+D A T A  S C I E N T I S T
+ARSLANE MEDJAHDI
+L A N G U E S
+Anglais  B2
+Allemand  A2
+Espagnol A2
+C O M P E T E N C E S
+Travail d’équipe
+Prise de décision
+Proactivité
+Écoute active
+Esprit critique 
+SOFT SKILLS : 
+Machine Learning
+Deep Learning
+Python (Jupyter Notebook), R
+SQL (MySQL)
+LateX, Powerpoint, QGIS
+HARD SKILLS : 
+P R O J E T S  D ' E T U D E
+Projet de M2 : La fouille de données au service du
+Développement Durable
+Étude d'une base de donnée regroupant les arbres de 
+Grenoble
+Prédiction de la présence de défaut de chaque arbre, ainsi 
+que sa localisation
+Visualisation de l'état général du parc végétal de Grenoble
+Portfolio Data Science :
+https://arslane18.github.io/arslanemedjahdi.github.io/
+E X P E R I E N C E  A N N E X E
+Bénévolat Linkee (Janvier 2023)
+Préparation et distribution de paniers repas pour les
+ étudiants en situation de précarité alimentaire 

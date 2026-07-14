@@ -1,0 +1,118 @@
+ 
+Internal
+©AZURIUS – Modeles-de-cv,com 
+©AZURIUS - My-resume-templates.com 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IKRAM 
+— EMBEDDED SYSTEM ENGINEER — 
+EL MOUSSAOUI 
+ikram1999elmoussaoui@gmail.com 
+Toulouse, France 
++33 6 83 93 78 50 
+Embedded Systems Engineer with 1 
+year of experience at Continental 
+Engineering Services, passionate 
+about embedded systems and 
+skilled in driver development, SoC 
+architectures, low-level 
+programming for embedded 
+systems, and technical problem-
+solving. I am seeking a position 
+starting from September 2024. 
+EDUCATION 
+Bretagne Sud University – France  
+Master of Complex Systems Engineering 
+Sept. 2021 - June 2024 
+Limoges University – France  
+Bachelor's Degree in Electronics/Optics 
+Embedded Systems 
+Sept. 2020 - June 2021 
+PROFESSIONAL EXPERIENCES 
+ Integration, testing, and development of drivers for ADAS cameras, 
+on Nvidia SoCs, debugging, and Nvidia forums. 
+Embedded Systems Developer 
+Sept. 2023 – Sept. 2024 
+ Implementation of a 3-axis gimbal stabilizer (steadycam) using three 
+servo motors utilizing the STM32 board. 
+RTOS Project 
+Nov. 2022 – Dec. 2022 
+ Development of a simple 16-bit microprocessor using the Basys3 
+board. 
+FPGA Project 
+Sept. 2022 – Oct. 2022 
+INTERESTS 
+ Scientific reading, particularly in 
+cosmology. 
+ Practice of yoga and dance. 
+PROFESSIONAL PROFILE 
+Continental Engineering Services - Toulouse, France 
+Bretagne Sud University - Lorient, France 
+Bretagne Sud University- Lorient, France 
+SKILLS  
+Programming Languages 
+ C/C++ 
+ Phyton 
+ VHDL  
+ Matlab 
+ Assembly   
+Language Skills 
+ French : Fluent 
+ English : Fluent 
+ Arabic : Native Language 
+System Development 
+ Kernel development  
+ Communication protocols   
+ SoCs 
+ Real-time systems 
+ Debugging 
+ ROS  
+Development Tools 
+ Git/GitHub 
+ Bash scripting  
+ Agile Project Management (JIRA) 
+ Jenkins 
+ Artifactory  
+ Final Year Project 'City Crossroads 
+Traffic Lights with Priority Lanes 
+Automation' aimed at controlling 
+traffic lights. 
+ Thesis focusing on the development 
+and integration of drivers on Nvidia 
+SoCs for the operation of cameras for 
+ADAS (Advanced Driver Assistance 
+Systems). 
+   24 ans  
+University Diploma in General Studies 
+(DEUG) 
+Cadi Ayyad University - Morocco 
+Sept.2017 – June 2020 
+  Higher Education in Physical Science 
+and Mathematics.  
+Internship: Improvement of an embedded control interface for machines 
+Trane Technologies - Charmes, France 
+Sept. 2022 – Oct. 2022 
+ Evaluate the cause of performance issues in a virtual simulator, propose a 
+solution that may involve an alternative data exchange method between 
+data and the modbus/IPC3 interface other than the COM technology. 
+QT Project / Python Project 
+Jan. 2022 – March. 2022 
+Bretagne Sud University - Lorient, France 
+ Implementation of a local messaging system using TCP and UDP protocols 
+using Qt in C++. 
+ Implementing the Q-Learning method for the Frozen Lake game in the 
+gym environment using Python. 
+ROVER Project 
+Bretagne Sud University- Lorient, France 
+Oct. 2021 – Feb. 2022 
+ Implementing the control of a ROVER. Controlling 4 ROVER motors, 
+adding a distance sensor in bare-metal and real-time. 
+ 
+Internal
+ 

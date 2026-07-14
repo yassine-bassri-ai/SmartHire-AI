@@ -1,0 +1,65 @@
+EDUCATION
+PROFESSIONAL EXPERIENCE
+TECHNICAL SKILLS
+Student at Ecole Nationale des Mines de Nancy
+Carl BOILLOT
++33 6 58 69 04 63
+carlboillot@orange.fr
+https://www.linkedin.com/in/carl-boillot/
+CONTACT
+I am looking for a gap year internship as a Data Scientist, lasting between 4 and 6 months and starting in February
+2024. I am curious and a fast learner, I am involved in many different clubs and societies which makes me flexible and
+comfortable working both as part of a team or independently.
+Applied Mathematics department course work : Deep Learning - Data Analysis -  Stochastic calculus - Time series
+Analysis - Monte-Carlo Method and Application to Random Processes - Partial Differential Equations - Quantitative
+Finance - Game Theory
+Common core courses : Numerical analysis - Probabilities - Statistics - Quantum Mechanics - Statistical Physics -
+Continuum Mechanics - General Economy - Economic Intelligence
+ENGINEER MINES DE NANCY CURRICULUM - MSc EQUIVALENT
+MINES NANCY
+Nancy, France
+2021 -
+LYCEE HENRI
+POINCARE
+Nancy, France
+2019 - 2021
+PREPARATORY COURSEWORK FOR ENGINEERING SCHOOLS - BSc EQUIVALENT
+Two years of intensive and advanced courses in mathematics, physics and chemistry dedicated to the preparation for
+the highly competitive entrance examinations to French Engineering schools.
+MINES NANCY
+Nancy, France
+2022 - 2023
+Team management
+Organisation and management of events : inter-college multi-sport tournament (L-INP : 800 athletes, Cartel : 1500
+athletes)
+VICE PRESIDENT OF THE COLLEGE SPORT COMITEE
+Assistance for handling, packaging, quality control
+SEASONAL EMPLOYEMENT
+SOPIL SA
+Pirey, France
+July 2022
+Discovery of industrial professions
+Administrative tasks in accounting
+PRODUCTION FACTORY OPERATOR INTERNSHIP
+SOPIL SA
+Pirey, France
+February 2022
+Programming Languages : Python, Matlab, R, SQL, VBA
+Machine Learning & Deep Learning : Keras, TensorFlow, Scikit-Learn, Pandas, Matplotlib
+Salesforce : Configuration, Development, Process Automation, Project Management
+Tools : Office Pack, Adobe Suite (Premiere Pro, Photoshop, After Effect)
+Linguistic Skills : French (native), English (confirmed), Spanish (intermediate), Japanese (beginner)
+PERSONAL INTERESTS
+Hobbies : Competitive table tennis, rugby and running - Piano during 7 years.
+Aviation : Aeronautic initiation certificate acquired in 2018
+SPRINGFIVE
+Issy les Moulineaux, France
+July - December 2023
+Organizing client workshops and gathering business requirements
+Designing and specifying the solution
+Solution build and configuration on Salesforce
+Conducting the user acceptance testing
+Conducting user training
+Implementation of a Salesforce (#1 CRM worldwide) solution for a leading technology communication company in
+Europe :
+SALESFORCE CONSULTANT INTERNSHIP

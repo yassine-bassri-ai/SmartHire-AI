@@ -1,0 +1,97 @@
+Khadija ARRADI
+Etudiante en Informatique
+Étudiante en master en Ingénierie informatique et Internet (3I) à la Faculté des Sciences Ain Chock,
+passionnée par l'informatique, je suis à la recherche d'un stage de projet de fin d'études pour appliquer mes
+compétences et contribuer à des projets innovants à partir de février 2024 jusqu'à Juillet/août 2024.
+Virtualisation:
+vmware workstation, Esxi
+Machine learning:
+Bayes, SVM, ACP, K-means, réseaux de
+neurones artificiels
+Base de données:
+PL/SQL, ORACLE 11G/12C, SQL PLUS,
+MYSQL, CouchDB, RMAN
+Developpement web:
+HTML, CSS, JS, JQuery, JEE, PHP,
+NodeJS, MVC, Restful Api, JSON,
+Hibernate
+Langage de programmation:
+C, C++, JAVA, Python.
+Web sémantique:
+XML, XPath, XLST, XQuery, RDF
+Conception:
+UML, Merise, ATL, BPMN,
+Système d'exploitation:
+Window, Linux
+Anglais
+courant
+Français
+courant
+Amazighe standard marocain
+langue maternelle
+Arabe
+langue maternelle
+Autonomie, créativité, adaptation,
+esprit d'équipe, résilience,
+persévérance et capacité
+d'apprentissage rapide
+Yoga, Creation des bracelets brésiliens,
+Photographie et dessin.
+Cybersecurity Fundamentals
+by IBM SkillsBuild
+Introduction to Data Science in Python
+coursera
+IELTS academic
+Credential ID 22MA003439ARRK002A
+(level C1)
+SCRUM foundation SFPC
+Credential ID 74365710
+Application Web gestion des conteneurs Docker CRUD/Performances
+Application web developpée sous Ubuntu avec Django permet des opérations CRUD sur
+les conteneurs Docker, incluant des visualisations de performances via Matplotlib, grâce
+aux bibliothèques Subprocess et Docker pour une gestion optimale.
+Mise en place d'un site Web pour la gestion des absences au sein FSAC
+Site Web développé avec Django, utilisant OpenCV et Haar Cascade pour la
+reconnaissance faciale, MySQL pour le stockage des données et Matplotlib pour les
+visualisations.
+Implementation d'un système de détection de somnolence en temps réel
+Système de prévention des accidents de la route liés à la fatigue, basé sur la détection en
+temps réel de la somnolence, implementer avec Django, Transfer Learning via MobileNet,
+OpenCV et Keras.
+Mise en place de Kereberos avec le back-end OpenLDAP (mini projet)
+Implémentation de protocoles OpenLDAP et Kerberos sur Ubuntu Linux pour la mise en
+place de protocoles de sécurité.
+khadijaarradi01@gmail.com
+
+SIDI MAAROUF /
+CASABLANCA
+
+ 0616-320616
+
+ Née le 06/09/2001
+
+ Télétravail ou présentiel
+
+Master Ingénierie Informatique et Internet (3I)
+Depuis octobre 2022 Faculté des sciences Ain Chock Casablanca
+formation géneraliste
+Licence Fondamentale en Science Mathématiques et Informatique
+De septembre 2019 à juin 2022 Faculté des sciences Ain Chock Casablanca
+option: Base de données
+stagiaire
+De novembre 2021 à février 2022 Startup Eduwave Casablanca
+Conception d'une application mobile pour enfants en réalité augmentée utilisant
+Vuforia Engine et Unity, permettant la découverte des sons des animaux.
+Stagiaire
+D'août 2023 à septembre 2023 Sanlam Assurance / Digital Factory Casablanca
+Implementation d'un site web avec React et Django Rest Framework, avec base de
+données Oracle 19c, pour la gestion des employés, des congés et des (tribes)
+départements au sein du département IT.
+Connaissances Techniques
+Langues
+Atouts de personnalité
+Talents
+Diplômes et Formations
+Expériences professionnelles
+Certification
+Projets Académiques

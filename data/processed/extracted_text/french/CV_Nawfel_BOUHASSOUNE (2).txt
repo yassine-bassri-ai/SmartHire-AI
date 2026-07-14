@@ -1,0 +1,99 @@
+Nawfel  BOUHASSOUNE
+Recherche d'un stage de fin d'études
+Je suis un élève ingénieur en troisième année cycle ingénieur en Finance et ingénierie
+décisionnelle à l'Ensa d'Agadir très passionné par les mathématiques et leurs
+applications en finance et je suis actuellement à la recherche d'un stage de fin d'études
+d'une durée de 6 mois avec une disponibilité à partir de Février
+Réseaux sociaux
+Langues
+Arabe
+Langue maternelle
+Anglais
+Advanced
+Français
+Niveau C1
+Compétence
+transversales
+Adaptabilité
+Collaboration
+Esprit Critique
+Creativité
+Centres d'intérêt
+Lecture
+ Œuvre philosophique,Romans (Policier ,
+Mystère , horreur ( H.P l ovecraft )),Light
+Novels
+PC Hardware
+Suivi de toutes les nouvelles technologies
+matérielles des PC ( new CPU/GPU/ MBD)
+Gaming
+Souls games , Rogue-like, Sandbox , Moba ,
+RPGS & MMORPGS , E-Sports
+Parascolaire
+Membre du club Traders & Analysts Club d'
+ENSA Agadir (depuis 2022)
+Membre de Apps Club (depuis 2019)
+Diplômes et Formations
+Expériences professionnelles
+Projet académique réalisée
+Projet Data Science :
+Prediction of a subscription to a new bank service using R :
+Utilisation des algorithmes de classification pour prédire le nombre de client de la
+banque qui vont accepter de souscrire a un nouveau service bancaire
+Projet Courbe des taux:
+Modéle d'éstimation de la courbe des taux:
+Estimation de la courbe des taux en utilisant les modèles Vasicek et CIR
+Projet valorisation des produits dérivées :
+Pricing des options européennes et américaines en utilisant python:
+Création d'une application web du pricing des options (Call et Put ) européennes et
+américaines en utilisation le modèle binomial avec les hypothéses de Cox-Ross-
+Rubinstein et Jarrow-Rudd et comparaison de la convergence avec le modéle
+Black-Scholes
+Projet Gestion de Risque:
+Calcul de VAR et ES pour un portefeuille :
+Calcul de la VAR et ES pour un portefeuille contenant des actions avec les 3
+méthodes : Paramétrique , Historique et Monte Carlo
+Compétences
+Recherche operationnelle et aide à la decision
+Programmation linéaire et non linéaire , Théorie des graphes , Processus Stochastiques
+Finance
+Mathématiques financières , Marchés financiers, Gestion financières , Valorisation des
+produits financiers , Valorisation et couverture par les produits dérivées , Calcul
+stochastique pour la finance, Courbe des Taux,Gestion de portefeuille,Mesure de risques
+Statistiques
+Statistiques descriptives ,Statistiques inférentielles , Statistiques non paramétriques ,
+Analyse des données , Séries temporelles , Économétrie , Théorie de la décision
+Data Science & Big Data
+Data Visualization , Data Wrangling & Reshaping , Machine Learning ( Classification ,
+Regression, Clustering ) , Text Mining
+Economie
+Microéconomie , Macroéconomie , Équilibre des marchés
+Language de programmation
+Java,R,C,Python
+nawfel.bouhassoune9@gmail.com
+
+Agadir,Maroc
+
+0652231458
+
+Mobilité :
+Nationale / Internationale
+
+@nawfel-bouhassoune
+
+Eléve ingénieur en Finance et Ingénierie Décisionnelle
+Depuis 2021 Ecole nationale des sciences appliquées Agadir
+Cycle préparatoire
+De 2018 à 2021 Ecole nationale des sciences appliquées Agadir
+Baccalaureat option Science Mathematique B
+De 2017 à 2018 Lycée Al Qalam Agadir
+Stage d'application
+De mars 2023 à mai 2023 Administration des Douanes et Impôts Indirects Agadir
+Développement d'un modèle de classification des déclarations d'importation pour
+la détection de la fraude douanière avec python :
+Manipulation des base de données pour pouvoir déterminer les variables clés
+de prédiction
+Entrainement de plusieurs modèles avec différent algorithmes de classification
+Comparaison et évaluation des performances des modèles et choix du modèle
+optimal
+Développement d'une application web

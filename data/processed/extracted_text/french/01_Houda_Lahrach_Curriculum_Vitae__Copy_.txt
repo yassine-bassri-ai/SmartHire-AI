@@ -1,0 +1,103 @@
+HOUDA LAHRACHE
+À la recheche d’un stage PFE Début Février
+[ houudalahrch20@gmail.com
+[ houda.lahrache@ump.ac.ma
+Ó +212 6 00 58 79 29
+½ Maroc, Oujda
+¯ linkedin.com/in/houda-lahrache-9a6550246
+ github.com/Houdalahrache
+RÉALISATIONS
+3
+Top Speaker | Club Altruisme ENSAO
+2ème place à la compétition "Top
+Speaker"
+Public Speaking
+g
+Vice Présidente du Club Reporters
+Leadership
+Esprit d’équipe
+
+Animatrice de plusieurs activités
+• Ateliers lors de la 9ème et 10ème édi-
+tion du Festival des Sciences
+• Journée Data Science and Cloud Com-
+puting, 1ère Édition
+COMPÉTENCES
+Software engineering
+• Python, Java, JEE, Web Scraping, R
+Intelligence Artiﬁcielle
+• Modèles : ARIMA , RNN , LSTM , BERT , KNN,
+Decision Tree, Naive Bayes
+• Outils : Pandas , Seaborn , Tensorﬂow
+• Formats de Données : Excel , CSV , SQL
+Dev Ops
+• Git and Github
+• Docker
+• Kubernetes
+Business Intelligence
+• ETL : Talend Open Studio
+• Restitution de données : Power BI
+• Data Streaming : Apache Kafka
+Base de données
+• SQL, PL/SQL, MySQL, Oracle
+LANGUE
+Français
+Courant
+Anglais
+Niveau Intermédiaire
+Arabe
+Langue maternelle
+ÉDUCATION
+Ingénierie Data Science and Cloud Computing
+ENSA Oujda | Université Mohammed Premier
+ Sept 2021 – Aujourd’hui
+½ Oujda, Oriental
+Cycle Préparatoire Intégrée
+ENSA Oujda | Université Mohammed Premier
+ Sept 2019 – Juin 2021
+½ Oujda, Oriental
+EXPERIENCE
+Stage d’Application en NLP pour l’analyse des articles sci-
+entiﬁques en IA et Extraction en Chatbot
+3D Smart Factory
+ Juillet 2023-Septembre 2023
+½ Maroc , Mohammadia
+1. Collecter les données depuis un API Arxiv.
+2. Préparation des données ( Extraction , Nettoyage, Tokenisation...)
+3. Entraînement d’un modèle BERT pour l’extraction d’informations.
+Tensorﬂow
+transformers
+Python
+Arxiv
+PROJET PERSONNEL
+Projet data science
+• Collecte des données à partir de Kaggle, suivi de la préparation des données.
+• Réalisation d’une analyse exploratoire approfondie des données.
+• Développement du modèle
+• Déploiement du modèle pour une utilisation eﬀective.
+scikit-learn
+seaborn
+numpy
+Matplotlib
+Pandas
+Projet d’Analyse des Réservations d’Hôtels avec Python
+• Collecte des données de réservation
+• Prétraitement et Analyse des données pour la qualité
+• Modélisation et prévision des tendances
+Pandas
+Seaborn
+Matplotlib
+Python
+Time series forecasting
+• L’analyse d’une série temporelle pour la prédiction du nombre de vols à main
+armée mensuels à Boston .
+ARIMA
+LSTM
+RNN
+Data Engineering
+• Etablissement d’un pipeline de streaming avec kafka et visualisation en Temps
+Réel .
+Docker
+kafka
+InﬂuxDB
+grafana

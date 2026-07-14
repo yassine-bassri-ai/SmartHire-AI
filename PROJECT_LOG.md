@@ -108,4 +108,108 @@ Aucune difficulté majeure.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Jour 4: 
+# Jour 4: Extraction des CV PDF et détection automatique de la langue
+
+## Date14/07/2026
+
+### Objectifs
+
+- Construire un pipeline de prétraitement capable d'extraire automatiquement le texte des CV PDF.
+- Détecter automatiquement la langue des CV (Français / Anglais).
+- Sauvegarder les textes extraits.
+- Générer un fichier de métadonnées pour le suivi des traitements.
+
+---
+
+## Travaux réalisés
+
+### 1. Extraction des CV PDF
+
+- Intégration de la bibliothèque PyMuPDF.
+- Développement du module `pdf_extraction.py`.
+- Extraction du texte page par page.
+- Sauvegarde automatique des textes au format `.txt`.
+
+### 2. Détection automatique de la langue
+
+- Intégration de la bibliothèque `langdetect`.
+- Développement du module `language_detector.py`.
+- Détection automatique des langues :
+  - Français (`fr`)
+  - Anglais (`en`)
+
+### 3. Gestion des métadonnées
+
+Création du module `metadata_manager.py`.
+
+Les informations enregistrées pour chaque CV sont :
+
+- Nom du fichier
+- Langue
+- Nombre de pages
+- Nombre de mots
+- Nombre de caractères
+- Nom du fichier texte généré
+- Statut du traitement
+
+Les métadonnées sont sauvegardées dans :
+
+data/processed/resumes_metadata.csv
+
+### 4. Pipeline de prétraitement
+
+Création du module `pipeline.py` permettant d'automatiser :
+
+1. Lecture des CV PDF.
+2. Extraction du texte.
+3. Détection de la langue.
+4. Calcul des statistiques.
+5. Sauvegarde des fichiers texte.
+6. Mise à jour des métadonnées.
+
+### 5. Organisation du projet
+
+Structure actuelle des modules :
+
+src/
+└── preprocessing/
+    ├── pdf_extraction.py
+    ├── language_detector.py
+    ├── metadata_manager.py
+    └── pipeline.py
+
+---
+
+## Difficultés rencontrées
+
+- Gestion des chemins avec `pathlib`.
+- Configuration des imports Python.
+- Lecture des fichiers CSV vides.
+- Gestion des erreurs lors du traitement des PDF.
+
+Toutes les difficultés ont été corrigées.
+
+---
+
+## Résultat
+
+Le pipeline est désormais capable de traiter automatiquement un dossier contenant plusieurs CV PDF et de produire :
+
+- les fichiers texte extraits ;
+- un fichier de métadonnées centralisé ;
+- des statistiques sur chaque document.
+
+Cette étape constitue la base de tout le pipeline NLP qui sera développé par la suite.
+
+---
+
+## Prochaine étape (Jour 5)
+
+Prétraitement NLP :
+
+- Nettoyage des textes
+- Normalisation
+- Suppression des caractères inutiles
+- Tokenisation
+- Suppression des stop words
+- Lemmatisation

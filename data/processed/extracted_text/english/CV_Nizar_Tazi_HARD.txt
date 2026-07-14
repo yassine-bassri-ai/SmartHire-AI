@@ -1,0 +1,168 @@
+Nizar Tazi 
+Data Scientist 
+Mail address: 
+Nizar.tazi@hotmail.fr 
+Junior Data Scientist with 1.5 years of hands-on experience in Python, SQL, and machine learning. I'm 
+passionate about unraveling data mysteries to uncover insights and optimize processes. I excel in 
+communicating these discoveries in a compelling and understandable manner. 
+My sense of organization, meticulousness and my capacity to analyse will quickly allow me to take on and 
+fulfill new assignments. 
+LATEST EDUCATION 
+Master 2, Machine Learning 
+for Data Science (MLSD) 
+Graduation project: Forecasts & Analysis of 
+pharmaceutical data at Sanofi. 
+Paris-Cité University, Paris | 2021 –
+2022 
+ 
+Master, Big Data & Cloud Computing 
+Graduation project: Optimization of the 
+MABED application using real time streams 
+from the twitter social network. 
+Ibn Tofail University, Kenitra | 2019 –
+2021 
+ 
+Bachelor’s in computer Sc. - Maths 
+Graduation project: Development of the 
+eCommercial 
+web 
+application: 
+Internet 
+shopping website created using Laravel as 
+the main back-end technology. 
+Ibn Tofail University, Kenitra | 2015 –
+2019 
+PROFESSIONAL EXPERIENCE 
+June 2023 - 2024 
+Data scientist 
+Junior 
+ARHS Developments 
+Belgium 
+Zaventem, Belgium 
+o 
+Collaborated with cross-functional teams to build data-
+driven solutions to business problems in the financial and 
+legal sector. 
+o 
+Analyzed extensive datasets to develop predictive models 
+and extract actionable insights, revealing valuable trends 
+and patterns within the data. 
+o 
+Conducted Dataiku training sessions for member states, 
+focusing on data preprocessing, modeling, and deployment 
+techniques. 
+o 
+Developed automation scripts and scenario analyses using 
+Python and SQL to optimize workflow performance. 
+o 
+Implemented 
+MLops 
+techniques 
+including 
+model 
+monitoring and version control using tools like MLflow. 
+o 
+Applied data manipulation techniques to preprocess and 
+transform raw data for analysis and modeling purposes. 
+April 2022 – November 
+2022 
+Data scientist 
+Intern 
+Sanofi 
+Gentilly, Ile-de-France, 
+ 
+o 
+Production of market performance reports and ad-hoc 
+analysis using CRM and market data. 
+o 
+Industrialization and update of data related to Oncology and 
+Dupixent product insights. 
+o 
+Assistance in harmonizing workflows and algorithms meet 
+best practices. 
+o 
+Use of Machine Learning algorithms to develop predictive 
+models for business needs. 
+April 2020 – June 2020  
+Freelance Data 
+scientist 
+www.khamssat.com 
+o 
+AN-APPS: Creation of a tool to extract information from a 
+shopping website using Data Scraping libraries. Graphical 
+implementation with PyQt 5. 
+o 
+PreDoc: 
+Development 
+of 
+a 
+web 
+interface 
+with 
+authentication using Django, including a disease prediction 
+by symptoms, provided by the user, based on real data 
+trained with a Machine learning algorithm. 
+ 
+ 
+ 
+LANGUAGES 
+TECHNICAL SKILLS 
+1 
+Phone: 
++32 4 77 65 35 71 
+Address: 
+Brussels 1030, 
+Belgium 
+GENERAL SKILLS 
+Machine Learning 
+Deep Learning 
+Database structure 
+Data Scraping 
+Data Preparation 
+Data Visualization 
+Agile Methodologies 
+English 
+Bilingual 
+- 
+TOEIC: 925/990 
+- 
+EFSET (C2 Proficiency) 
+ 
+French  
+Bilingual 
+- 
+TCF DAP 2018 
+- 
+TCF TP 2020 
+ 
+Arabic  
+Native Language 
+Software / Tools 
+Dataiku, Azure Databricks, Excel, Power BI, 
+Oracle Business Intelligence, Apache Spark, 
+Hadoop, Docker 
+ 
+Machine Learning / Deep Learning 
+Regression, Classification, NLP, Clustering, 
+Forecasting (Time Series), Deep Neural 
+Networks, 
+TensorFlow, 
+Pytorch,
+Huggingface 
+ 
+ 
+Programming Languages / WEB Development 
+Python, R, C, C++, SHELL, JAVA, HTML, CSS, JS, Laravel,
+Django 
+ 
+Data processing 
+Pandas, Numpy, Scikit-learn, Spark 
+ 
+Database  
+SQL, Oracle, NoSQL 
+ 
+ 
+INTERESTS 
+Music: Self taught Guitarist / Singer 
+Road Trips 
+Artificial Intelligence & New Technologies 

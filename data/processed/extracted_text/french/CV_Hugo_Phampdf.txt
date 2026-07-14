@@ -1,0 +1,84 @@
+14 Cr de Lattre de Tassigny
+57100 Thionville, France
++33 7 70 77 07 95
+pham.hugo01@gmail.com
+Expériences professionnelles
+EDUCATION
+Compétences
+•
+Office
+•
+Python
+•
+R
+•
+SQL
+•
+Excel / VBA
+•
+Java
+•
+C
+•
+JavaScript
+•
+HTML
+•
+MatLab
+Langues
+Français : Langue maternelle 
+Anglais : Avancé (C1, IELTS)
+Espagnol : Intermédiaire
+Japonais :  Débutant (N5, JLPT)
+Vietnamien : Compréhension basique
+PHAM Hugo
+Recherche de CDD de 6 mois à Grenoble
+Data / IA / Environnement
+Ingénieur de l’école des Mines de Nancy
+	
+Classes préparatoires MPSI-MP au lycée Hoche à Versailles, 2019-2021 
+Cours de haut niveau académique en mathématiques et en physique.
+Projet - Urbanloop, Nancy | 2021-2022 - 1 an
+Description:
+• Capsule des JO 2024, record du mode du transport le moins énergivore.
+• Étude comparative sur l’isolation thermique des matériaux.
+• Étude décisionnelle sur le confort thermique et phonique de la capsule.
+Stage - Everity, Versailles | 2023 - 3 mois
+Description:
+• Mise en place d’outils d’aide à la décision pour les entreprises.
+• Prédiction de l’évolution des objectifs de développement durable (R/Excel).
+• Documentation sur les enjeux environnementaux
+École des Mines de Nancy, 2021-2024
+École généraliste, spécialisation en data science (informatique et mathématiques). 
+Cours de département : Machine learning, Deep learning, Analyse d’images,
+Analyse de données, Statistiques, Optimisation, Programmation,…
+Tronc commun : Transformation de la matière en énergie, Mécanique des milieux 
+continus solide et fluide…
+Hobbies
+Sport : Ceinture noire de Taekwondo. 
+Pratique du Volley-Ball, Basket-Ball, 
+Ping-Pong and Tennis.
+Musique : Guitariste, et membre d’un 
+orchestre pendant deux ans.
+Art : Cinéma, Théâtre et visites de 
+musées
+	
+Lycée Jules Verne à Cergy, 2016-2019 
+Baccalauréat scientifique, mention félicitations du jury.
+Pham Hugo
+Projet Industrie - Analytics, Nouvelle-Calédonie | 2022-2023 - 1 an
+Description:
+• Détection de feux de forêt à partir d’analyse d’images de caméra (PyTorch).
+• Comparaisons d’algorithmes d’apprentissage automatique.
+• Estimation de distance avec vision par ordinateur (Matlab, OpenCV).
+Projet en laboratoire - TechLab Mines Nancy, 2023-2024 - 6 mois
+Description:
+• Tracking vidéo de circulation routière à l’aide d’intelligence artificielle.
+• Analyse d’images caméra pour établir des similitudes entre deux objets.
+• Représentation 2D d’une trajectoire 3D sur python.
+Stage - PwC Luxembourg, 2024 - 6 mois
+Description:
+• Application des directives environnementales de l’UE.
+• Analyse des données environnementales dans le cadre de missions d’audit.
+• Conseil en matière de reporting de durabilité.
+Permis B
