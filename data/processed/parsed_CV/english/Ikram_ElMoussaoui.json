@@ -1,0 +1,24 @@
+{
+    "filename": "Ikram_ElMoussaoui",
+    "language": "en",
+    "skills": [
+        "c",
+        "git",
+        "github",
+        "python"
+    ],
+    "education": [
+        "bachelor",
+        "engineer",
+        "master"
+    ],
+    "experience_years": 25,
+    "languages": [
+        "arabic",
+        "english",
+        "french"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.629807"
+}

@@ -1,0 +1,40 @@
+{
+    "filename": "Ibrahim_LAHLOU",
+    "language": "en",
+    "skills": [
+        "css",
+        "deep learning",
+        "django",
+        "docker",
+        "flask",
+        "git",
+        "github",
+        "html",
+        "java",
+        "kubernetes",
+        "machine learning",
+        "mysql",
+        "nlp",
+        "power bi",
+        "python",
+        "pytorch",
+        "react",
+        "sql"
+    ],
+    "education": [
+        "master"
+    ],
+    "experience_years": 4,
+    "languages": [
+        "arabic",
+        "english",
+        "french"
+    ],
+    "certifications": [
+        "aws",
+        "gcp",
+        "google cloud"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.609066"
+}

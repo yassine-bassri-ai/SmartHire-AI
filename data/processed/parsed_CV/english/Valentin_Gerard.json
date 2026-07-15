@@ -1,0 +1,34 @@
+{
+    "filename": "Valentin_Gerard",
+    "language": "en",
+    "skills": [
+        "computer vision",
+        "deep learning",
+        "git",
+        "machine learning",
+        "matplotlib",
+        "nlp",
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "ingénieur",
+        "master"
+    ],
+    "experience_years": 6,
+    "languages": [
+        "english",
+        "french",
+        "german",
+        "italian"
+    ],
+    "certifications": [
+        "google cloud"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.996924"
+}

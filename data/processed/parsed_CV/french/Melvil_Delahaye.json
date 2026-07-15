@@ -1,0 +1,22 @@
+{
+    "filename": "Melvil_Delahaye",
+    "language": "fr",
+    "skills": [
+        "c",
+        "python",
+        "react",
+        "sql"
+    ],
+    "education": [
+        "ingénieur"
+    ],
+    "experience_years": 15,
+    "languages": [
+        "allemand",
+        "anglais",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.662348"
+}

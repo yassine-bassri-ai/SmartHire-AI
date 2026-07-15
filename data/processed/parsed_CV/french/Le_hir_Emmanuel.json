@@ -1,0 +1,26 @@
+{
+    "filename": "Le_hir_Emmanuel",
+    "language": "fr",
+    "skills": [
+        "deep learning",
+        "excel",
+        "mongodb",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "ingénieur",
+        "master"
+    ],
+    "experience_years": 19,
+    "languages": [
+        "anglais",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [
+        "microsoft"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.523508"
+}

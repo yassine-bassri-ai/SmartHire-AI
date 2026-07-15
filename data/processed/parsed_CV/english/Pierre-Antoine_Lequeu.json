@@ -1,0 +1,29 @@
+{
+    "filename": "Pierre-Antoine_Lequeu",
+    "language": "en",
+    "skills": [
+        "c",
+        "computer vision",
+        "javascript",
+        "machine learning",
+        "python",
+        "pytorch",
+        "react",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "ingénieur",
+        "licence",
+        "master"
+    ],
+    "experience_years": 5,
+    "languages": [
+        "english",
+        "french",
+        "german"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.938548"
+}

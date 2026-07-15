@@ -1,0 +1,24 @@
+{
+    "filename": "Elise_Suspne",
+    "language": "en",
+    "skills": [
+        "c",
+        "html",
+        "java",
+        "mongodb",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "engineer"
+    ],
+    "experience_years": 1,
+    "languages": [
+        "english",
+        "french",
+        "german"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.526593"
+}

@@ -1,0 +1,25 @@
+{
+    "filename": "Theo_Changarnier",
+    "language": "fr",
+    "skills": [
+        "c",
+        "css",
+        "javascript",
+        "mysql"
+    ],
+    "education": [
+        "engineer",
+        "master"
+    ],
+    "experience_years": 9,
+    "languages": [
+        "english",
+        "french",
+        "german"
+    ],
+    "certifications": [
+        "cisco"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.963661"
+}

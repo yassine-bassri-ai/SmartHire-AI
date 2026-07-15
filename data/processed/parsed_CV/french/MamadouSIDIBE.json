@@ -1,0 +1,42 @@
+{
+    "filename": "MamadouSIDIBE",
+    "language": "fr",
+    "skills": [
+        "c",
+        "css",
+        "deep learning",
+        "docker",
+        "excel",
+        "git",
+        "github",
+        "html",
+        "java",
+        "javascript",
+        "kubernetes",
+        "linux",
+        "machine learning",
+        "mysql",
+        "numpy",
+        "opencv",
+        "oracle",
+        "power bi",
+        "python",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "ingénieur",
+        "master"
+    ],
+    "experience_years": 4,
+    "languages": [
+        "anglais",
+        "français"
+    ],
+    "certifications": [
+        "aws",
+        "google cloud"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.601602"
+}

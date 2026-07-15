@@ -213,3 +213,186 @@ Prétraitement NLP :
 - Tokenisation
 - Suppression des stop words
 - Lemmatisation
+
+-----------------------------------------------------------------------------------------
+# 📅 JOUR 5 – Prétraitement NLP et Développement du CV Parser
+
+**Date :** 15/07/2026
+
+---
+
+#  Objectif
+
+Mettre en place un pipeline complet permettant de transformer automatiquement les CV PDF en données structurées prêtes à être exploitées par les modèles de Machine Learning, Deep Learning et le moteur de Matching.
+
+---
+
+#  Travail réalisé
+
+## 1. Prétraitement NLP
+
+Développement du pipeline de prétraitement des textes extraits des CV.
+
+Création des modules :
+
+- text_cleaner.py
+- tokenizer.py
+- stopwords_remover.py
+- lemmatizer.py
+- preprocessing_pipeline.py
+
+Le pipeline réalise automatiquement :
+
+- conversion en minuscules ;
+- suppression des caractères spéciaux ;
+- suppression des ponctuations ;
+- suppression des espaces inutiles ;
+- suppression des chiffres non pertinents ;
+- tokenisation ;
+- suppression des stop words ;
+- lemmatisation.
+
+Tous les CV sont ensuite enregistrés sous forme de fichiers texte nettoyés dans :
+
+```
+data/processed/cleaned_text/
+```
+
+---
+
+## 2. Détection automatique de la langue
+
+Mise en place de la détection automatique de la langue (français / anglais) lors du traitement des CV afin de faciliter les étapes suivantes du pipeline.
+
+---
+
+## 3. Développement du CV Parser
+
+Création du module :
+
+```
+src/information_extraction/
+```
+
+Développement des composants suivants :
+
+- parser.py
+- skill_extractor.py
+- education_extractor.py
+- experience_extractor.py
+- language_extractor.py
+- certification_extractor.py
+- cv_parser_pipeline.py
+
+---
+
+## 4. Extraction automatique des informations
+
+Développement des extracteurs permettant d'identifier automatiquement :
+
+- les compétences techniques ;
+- le niveau d'études ;
+- les années d'expérience ;
+- les langues parlées ;
+- les certifications.
+
+Les informations sont ensuite regroupées dans une structure JSON.
+
+Exemple :
+
+```json
+{
+    "filename": "Alix_Lamotte",
+    "language": "english",
+    "skills": [
+        "python",
+        "sql",
+        "power bi"
+    ],
+    "education": [
+        "master"
+    ],
+    "experience_years": 3,
+    "languages": [
+        "english",
+        "french"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:30:00"
+}
+```
+
+---
+
+## 5. Pipeline complet de parsing
+
+Développement d'un pipeline permettant de :
+
+- parcourir automatiquement tous les CV prétraités ;
+- appliquer le CV Parser sur chaque CV ;
+- générer un fichier JSON pour chaque CV ;
+- enregistrer les résultats dans :
+
+```
+data/processed/parsed_cv/
+```
+
+---
+
+## 6. Validation et tests
+
+Tests réalisés sur plusieurs CV en français et en anglais.
+
+Corrections apportées :
+
+- résolution des erreurs d'import Python ;
+- correction des chemins de fichiers ;
+- correction des erreurs liées au traitement des PDF ;
+- amélioration de l'organisation des dossiers ;
+- correction du pipeline de parsing ;
+- amélioration de la gestion des langues.
+
+---
+
+#  Structure ajoutée
+
+```
+src/
+├── preprocessing/
+│   ├── text_cleaner.py
+│   ├── tokenizer.py
+│   ├── stopwords_remover.py
+│   ├── lemmatizer.py
+│   └── preprocessing_pipeline.py
+│
+└── information_extraction/
+    ├── parser.py
+    ├── skill_extractor.py
+    ├── education_extractor.py
+    ├── experience_extractor.py
+    ├── language_extractor.py
+    ├── certification_extractor.py
+    └── cv_parser_pipeline.py
+```
+
+---
+
+#  Résultats obtenus
+
+À l'issue de cette étape, le projet est capable de :
+
+- extraire automatiquement le texte des CV ;
+- nettoyer et normaliser les textes ;
+- détecter la langue des CV ;
+- extraire les principales informations (compétences, diplômes, expériences, langues et certifications) ;
+- convertir chaque CV en un fichier JSON structuré ;
+- préparer les données pour les prochaines étapes du projet.
+
+---
+
+#  Prochaine étape (Jour 6)
+
+Développer le **Job Parser** afin d'extraire automatiquement les informations des offres d'emploi, puis commencer le **Feature Engineering** pour préparer les données destinées aux modèles de Machine Learning et au moteur de Matching.
+
+------------------------------------------------------------------------------------------------------------------------

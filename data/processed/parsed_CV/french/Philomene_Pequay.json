@@ -1,0 +1,24 @@
+{
+    "filename": "Philomene_Pequay",
+    "language": "fr",
+    "skills": [
+        "python",
+        "sql"
+    ],
+    "education": [
+        "bac",
+        "ingénieur"
+    ],
+    "experience_years": 8,
+    "languages": [
+        "allemand",
+        "anglais",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [
+        "microsoft"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.913106"
+}

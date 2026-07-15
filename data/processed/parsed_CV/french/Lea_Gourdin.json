@@ -1,0 +1,21 @@
+{
+    "filename": "Lea_Gourdin",
+    "language": "fr",
+    "skills": [
+        "c",
+        "excel"
+    ],
+    "education": [
+        "bachelor",
+        "mba"
+    ],
+    "experience_years": 4,
+    "languages": [
+        "anglais",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.484785"
+}

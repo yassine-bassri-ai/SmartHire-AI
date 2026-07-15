@@ -1,0 +1,38 @@
+{
+    "filename": "Ibrahim_Lahlou",
+    "language": "fr",
+    "skills": [
+        "django",
+        "docker",
+        "flask",
+        "git",
+        "github",
+        "java",
+        "javascript",
+        "linux",
+        "mysql",
+        "nlp",
+        "pandas",
+        "power bi",
+        "python",
+        "pytorch",
+        "react",
+        "sql",
+        "tableau",
+        "tensorflow"
+    ],
+    "education": [
+        "ingénieur"
+    ],
+    "experience_years": 7,
+    "languages": [
+        "anglais",
+        "français"
+    ],
+    "certifications": [
+        "aws",
+        "microsoft"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.333140"
+}

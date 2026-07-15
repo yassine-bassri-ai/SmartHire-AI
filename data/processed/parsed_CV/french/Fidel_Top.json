@@ -1,0 +1,22 @@
+{
+    "filename": "Fidel_Top",
+    "language": "fr",
+    "skills": [
+        "linux",
+        "machine learning",
+        "python"
+    ],
+    "education": [
+        "ingénieur",
+        "master"
+    ],
+    "experience_years": 5,
+    "languages": [
+        "anglais",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.248840"
+}

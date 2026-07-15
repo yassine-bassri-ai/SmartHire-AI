@@ -1,0 +1,23 @@
+{
+    "filename": "Hugo_Bonnand",
+    "language": "en",
+    "skills": [
+        "machine learning",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "engineer",
+        "master"
+    ],
+    "experience_years": 8,
+    "languages": [
+        "english",
+        "french",
+        "italian",
+        "spanish"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.595723"
+}

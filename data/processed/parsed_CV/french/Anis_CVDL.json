@@ -1,0 +1,28 @@
+{
+    "filename": "Anis_CVDL",
+    "language": "fr",
+    "skills": [
+        "c",
+        "deep learning",
+        "excel",
+        "keras",
+        "pandas",
+        "python",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "ingénieur",
+        "licence"
+    ],
+    "experience_years": 16,
+    "languages": [
+        "anglais",
+        "arabe",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.168316"
+}

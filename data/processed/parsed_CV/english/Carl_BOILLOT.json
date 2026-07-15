@@ -1,0 +1,26 @@
+{
+    "filename": "Carl_BOILLOT",
+    "language": "en",
+    "skills": [
+        "deep learning",
+        "keras",
+        "machine learning",
+        "matplotlib",
+        "pandas",
+        "python",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "engineer"
+    ],
+    "experience_years": 6,
+    "languages": [
+        "english",
+        "french",
+        "spanish"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.433509"
+}

@@ -7,8 +7,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.preprocessing.pipeline import process_folder
 
-input_folder = PROJECT_ROOT / "data/raw/resumes/french"
+input_folder = PROJECT_ROOT / "data/raw/resumes/english"
 
-output_folder = PROJECT_ROOT / "data/processed/extracted_text/french"
+output_folder = PROJECT_ROOT / "data/processed/extracted_text/english"
 
 process_folder(input_folder, output_folder)

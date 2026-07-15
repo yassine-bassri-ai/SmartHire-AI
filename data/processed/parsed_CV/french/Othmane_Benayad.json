@@ -1,0 +1,24 @@
+{
+    "filename": "Othmane_Benayad",
+    "language": "fr",
+    "skills": [
+        "excel",
+        "python"
+    ],
+    "education": [
+        "bac",
+        "bachelor",
+        "master"
+    ],
+    "experience_years": 25,
+    "languages": [
+        "anglais",
+        "arabe",
+        "français"
+    ],
+    "certifications": [
+        "microsoft"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.832887"
+}

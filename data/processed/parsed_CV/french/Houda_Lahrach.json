@@ -1,0 +1,31 @@
+{
+    "filename": "Houda_Lahrach",
+    "language": "fr",
+    "skills": [
+        "docker",
+        "excel",
+        "git",
+        "github",
+        "java",
+        "kubernetes",
+        "matplotlib",
+        "mysql",
+        "nlp",
+        "numpy",
+        "oracle",
+        "pandas",
+        "power bi",
+        "python",
+        "sql"
+    ],
+    "education": [],
+    "experience_years": 4,
+    "languages": [
+        "anglais",
+        "arabe",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.295843"
+}

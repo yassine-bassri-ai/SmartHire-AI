@@ -1,0 +1,26 @@
+{
+    "filename": "Souleyman_Yaffa",
+    "language": "fr",
+    "skills": [
+        "deep learning",
+        "machine learning",
+        "power bi",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "master"
+    ],
+    "experience_years": 5,
+    "languages": [
+        "anglais",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [
+        "gcp",
+        "google cloud"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.954701"
+}

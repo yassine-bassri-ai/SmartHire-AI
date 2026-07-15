@@ -1,0 +1,28 @@
+{
+    "filename": "Julien_Commes",
+    "language": "en",
+    "skills": [
+        "c",
+        "computer vision",
+        "git",
+        "linux",
+        "machine learning",
+        "numpy",
+        "opencv",
+        "python",
+        "pytorch"
+    ],
+    "education": [
+        "engineer",
+        "master"
+    ],
+    "experience_years": 7,
+    "languages": [
+        "english",
+        "french",
+        "spanish"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.687106"
+}

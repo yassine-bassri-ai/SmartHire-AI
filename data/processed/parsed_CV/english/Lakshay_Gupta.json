@@ -1,0 +1,26 @@
+{
+    "filename": "Lakshay_Gupta",
+    "language": "en",
+    "skills": [
+        "c",
+        "django",
+        "docker",
+        "flask",
+        "git",
+        "github",
+        "mongodb",
+        "postgresql",
+        "python",
+        "react"
+    ],
+    "education": [
+        "bachelor"
+    ],
+    "experience_years": 46,
+    "languages": [],
+    "certifications": [
+        "aws"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.725644"
+}

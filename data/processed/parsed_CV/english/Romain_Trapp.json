@@ -1,0 +1,25 @@
+{
+    "filename": "Romain_Trapp",
+    "language": "en",
+    "skills": [
+        "deep learning",
+        "excel",
+        "python"
+    ],
+    "education": [
+        "engineer",
+        "licence",
+        "master"
+    ],
+    "experience_years": 14,
+    "languages": [
+        "english",
+        "french",
+        "german"
+    ],
+    "certifications": [
+        "microsoft"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.956831"
+}

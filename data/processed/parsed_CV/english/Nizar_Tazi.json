@@ -1,0 +1,39 @@
+{
+    "filename": "Nizar_Tazi",
+    "language": "en",
+    "skills": [
+        "c",
+        "css",
+        "deep learning",
+        "django",
+        "docker",
+        "excel",
+        "html",
+        "java",
+        "machine learning",
+        "nlp",
+        "numpy",
+        "oracle",
+        "pandas",
+        "power bi",
+        "python",
+        "pytorch",
+        "sql",
+        "tensorflow"
+    ],
+    "education": [
+        "bachelor",
+        "master"
+    ],
+    "experience_years": 9,
+    "languages": [
+        "arabic",
+        "english",
+        "french"
+    ],
+    "certifications": [
+        "azure"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:53.817365"
+}

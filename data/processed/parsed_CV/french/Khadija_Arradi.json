@@ -1,0 +1,37 @@
+{
+    "filename": "Khadija_Arradi",
+    "language": "fr",
+    "skills": [
+        "c",
+        "css",
+        "django",
+        "docker",
+        "html",
+        "java",
+        "keras",
+        "linux",
+        "machine learning",
+        "matplotlib",
+        "mysql",
+        "opencv",
+        "oracle",
+        "python",
+        "react",
+        "sql"
+    ],
+    "education": [
+        "licence",
+        "master"
+    ],
+    "experience_years": 25,
+    "languages": [
+        "anglais",
+        "arabe",
+        "français"
+    ],
+    "certifications": [
+        "ibm"
+    ],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.436631"
+}

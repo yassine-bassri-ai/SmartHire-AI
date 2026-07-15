@@ -1,0 +1,25 @@
+{
+    "filename": "LAAMRI_CVL",
+    "language": "fr",
+    "skills": [
+        "c",
+        "excel",
+        "pandas",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "ingénieur",
+        "licence"
+    ],
+    "experience_years": 17,
+    "languages": [
+        "anglais",
+        "arabe",
+        "espagnol",
+        "français"
+    ],
+    "certifications": [],
+    "parsing_status": "success",
+    "parsed_at": "2026-07-15T20:26:54.462445"
+}
