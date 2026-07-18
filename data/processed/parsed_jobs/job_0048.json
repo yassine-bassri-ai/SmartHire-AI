@@ -1,0 +1,20 @@
+{
+    "job_title": "Data Analyst",
+    "skills": [
+        "aws",
+        "hadoop",
+        "python",
+        "spark",
+        "sql"
+    ],
+    "education": [
+        "bachelor",
+        "degree",
+        "master"
+    ],
+    "languages": [],
+    "experience_years": 12,
+    "certifications": [
+        "aws"
+    ]
+}

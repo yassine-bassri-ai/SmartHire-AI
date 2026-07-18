@@ -396,3 +396,136 @@ src/
 Développer le **Job Parser** afin d'extraire automatiquement les informations des offres d'emploi, puis commencer le **Feature Engineering** pour préparer les données destinées aux modèles de Machine Learning et au moteur de Matching.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+# JOUR 6 - Prétraitement NLP et Job Parser des offres d'emploi
+
+## Objectif
+
+Préparer les offres d'emploi pour la phase de matching en appliquant le pipeline de prétraitement NLP, puis développer un Job Parser capable d'extraire automatiquement les informations importantes de chaque offre et de les convertir en fichiers JSON structurés.
+
+---
+
+## Travail réalisé
+
+### 1. Prétraitement des offres d'emploi
+
+- Analyse du dataset des offres d'emploi (`jobs.csv`).
+- Vérification des dimensions, des types de données, des valeurs manquantes et des doublons.
+- Nettoyage du dataset.
+- Réutilisation du pipeline NLP développé pour les CV.
+- Développement du module `job_preprocessing.py`.
+- Développement du pipeline `job_pipeline.py`.
+- Détection et gestion des langues non supportées.
+- Prétraitement des **2253 descriptions d'emploi**.
+- Génération du fichier :
+
+```
+data/processed/job_descriptions/jobs_preprocessed.csv
+```
+
+---
+
+### 2. Développement du Job Parser
+
+Création du module :
+
+```
+src/job_parser/
+```
+
+Développement des composants suivants :
+
+- `parser.py`
+- `pipeline.py`
+
+Le Job Parser réutilise les extracteurs déjà développés pour les CV :
+
+- Skill Extractor
+- Education Extractor
+- Experience Extractor
+- Language Extractor
+- Certification Extractor
+
+Chaque offre d'emploi est automatiquement analysée afin d'extraire :
+
+- le titre du poste ;
+- les compétences techniques ;
+- le niveau d'études requis ;
+- les années d'expérience ;
+- les langues demandées ;
+- les certifications.
+
+---
+
+### 3. Génération des offres structurées
+
+Développement du pipeline permettant de :
+
+- lire `jobs_preprocessed.csv` ;
+- analyser chaque offre d'emploi ;
+- générer un fichier JSON par offre.
+
+Les fichiers sont enregistrés dans :
+
+```
+data/processed/parsed_jobs/
+```
+
+---
+
+##  Nouveaux fichiers développés
+
+```
+src/job_processing/
+    job_preprocessing.py
+    job_pipeline.py
+
+src/job_parser/
+    parser.py
+    pipeline.py
+
+tests/
+    test_job_preprocessing.py
+    test_job_parser.py
+```
+
+---
+
+##  Résultats
+
+- Dataset nettoyé et prétraité.
+- 2253 offres d'emploi traitées.
+- Création du fichier `jobs_preprocessed.csv`.
+- Génération des fichiers JSON des offres d'emploi.
+- Pipeline entièrement automatisé pour le traitement des offres.
+
+---
+
+##  Compétences acquises
+
+- Prétraitement NLP des descriptions d'emploi.
+- Réutilisation d'un pipeline NLP.
+- Extraction automatique d'informations.
+- Génération de fichiers JSON.
+- Réutilisation de modules entre CV Parser et Job Parser.
+- Organisation modulaire d'un projet Python.
+
+---
+
+##  État du projet
+
+Terminés :
+
+- ✔ Structure du projet
+- ✔ Extraction des CV PDF
+- ✔ Détection automatique de la langue
+- ✔ Prétraitement NLP des CV
+- ✔ CV Parser
+- ✔ Prétraitement des offres d'emploi
+- ✔ Job Parser
+
+Le projet est désormais prêt pour la prochaine étape :
+
+➡ **Jour 7 : Développement du moteur de Matching (CV ↔ Job Description)**.
+
+---------------------------------------------------------------------------------------------------------

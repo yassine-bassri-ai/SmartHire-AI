@@ -1,0 +1,31 @@
+{
+    "job_title": "Data Analyst III",
+    "skills": [
+        "aws",
+        "azure",
+        "hadoop",
+        "java",
+        "javascript",
+        "machine learning",
+        "mongodb",
+        "mysql",
+        "oracle",
+        "postgresql",
+        "python",
+        "sql"
+    ],
+    "education": [
+        "bachelor",
+        "degree",
+        "master"
+    ],
+    "languages": [],
+    "experience_years": 0,
+    "certifications": [
+        "aws",
+        "azure",
+        "google",
+        "microsoft",
+        "oracle"
+    ]
+}

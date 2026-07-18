@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from src.information_extraction.skill_extractor import extract_skills
-from src.information_extraction.education_extractor import extract_education
-from src.information_extraction.experience_extractor import extract_years_of_experience
-from src.information_extraction.language_extractor import extract_languages
-from src.information_extraction.certification_extractor import extract_certifications
+from src.extractors.skill_extractor import extract_skills
+from src.extractors.education_extractor import extract_education
+from src.extractors.experience_extractor import extract_years_of_experience
+from src.extractors.language_extractor import extract_languages
+from src.extractors.certification_extractor import extract_certifications
 
 
 def parse_cv(text: str, filename: str, language: str):

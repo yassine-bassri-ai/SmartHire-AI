@@ -1,0 +1,27 @@
+{
+    "job_title": "Data Analyst",
+    "skills": [
+        "c",
+        "hadoop",
+        "java",
+        "javascript",
+        "machine learning",
+        "mysql",
+        "power bi",
+        "python",
+        "r",
+        "spark",
+        "sql",
+        "tableau"
+    ],
+    "education": [
+        "bachelor",
+        "degree",
+        "master"
+    ],
+    "languages": [],
+    "experience_years": 0,
+    "certifications": [
+        "google"
+    ]
+}

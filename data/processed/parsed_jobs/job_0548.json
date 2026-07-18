@@ -1,0 +1,26 @@
+{
+    "job_title": "Data Analyst",
+    "skills": [
+        "git",
+        "mongodb",
+        "postgresql",
+        "python",
+        "seaborn",
+        "sql"
+    ],
+    "education": [
+        "bachelor",
+        "degree"
+    ],
+    "languages": [
+        "arabic",
+        "chinese",
+        "french",
+        "japanese",
+        "portuguese",
+        "spanish",
+        "turkish"
+    ],
+    "experience_years": 0,
+    "certifications": []
+}
