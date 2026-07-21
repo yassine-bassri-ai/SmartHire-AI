@@ -399,6 +399,7 @@ Développer le **Job Parser** afin d'extraire automatiquement les informations d
 
 # JOUR 6 - Prétraitement NLP et Job Parser des offres d'emploi
 
+**Date:** 17/07/2026
 ## Objectif
 
 Préparer les offres d'emploi pour la phase de matching en appliquant le pipeline de prétraitement NLP, puis développer un Job Parser capable d'extraire automatiquement les informations importantes de chaque offre et de les convertir en fichiers JSON structurés.
@@ -529,3 +530,192 @@ Le projet est désormais prêt pour la prochaine étape :
 ➡ **Jour 7 : Développement du moteur de Matching (CV ↔ Job Description)**.
 
 ---------------------------------------------------------------------------------------------------------
+# Jour 7 -
+
+**Date :** 21 Juillet 2026
+
+---
+
+# Objectif du Jour
+
+L'objectif principal de cette journée était de développer la première version du moteur de matching (Rule-Based Matching Engine). Ce moteur compare automatiquement les informations extraites d'un CV avec les exigences d'une offre d'emploi afin de produire un score global de compatibilité et une recommandation.
+
+---
+
+# Travaux réalisés
+
+## 1. Création du module Matching
+
+Un nouveau package `matching` a été ajouté dans le projet afin de regrouper tous les composants responsables de la comparaison entre les candidats et les offres d'emploi.
+
+Architecture créée :
+
+```text
+src/
+│
+├── matching/
+│   ├── __init__.py
+│   ├── skill_matcher.py
+│   ├── education_matcher.py
+│   ├── experience_matcher.py
+│   ├── language_matcher.py
+│   ├── certification_matcher.py
+│   ├── score_calculator.py
+│   └── matching_pipeline.py
+```
+
+---
+
+## 2. Développement des modules de comparaison
+
+Les modules suivants ont été développés :
+
+### Skill Matcher
+
+* comparaison des compétences du CV avec celles demandées par l'offre ;
+* calcul du pourcentage de compétences correspondantes.
+
+### Education Matcher
+
+* hiérarchie des diplômes implémentée ;
+* prise en charge des listes de diplômes extraites des CV ;
+* sélection automatique du diplôme le plus élevé.
+
+### Experience Matcher
+
+* comparaison des années d'expérience ;
+* score proportionnel lorsque le candidat possède moins d'expérience que celle demandée.
+
+### Language Matcher
+
+* comparaison des langues maîtrisées avec celles exigées.
+
+### Certification Matcher
+
+* comparaison des certifications obtenues avec celles demandées.
+
+---
+
+## 3. Calcul du score global
+
+Un calculateur de score pondéré a été développé.
+
+Répartition des poids :
+
+| Critère        | Poids |
+| -------------- | ----: |
+| Skills         |  45 % |
+| Education      |  20 % |
+| Experience     |  15 % |
+| Languages      |  10 % |
+| Certifications |  10 % |
+
+Le moteur génère également une recommandation automatique :
+
+* Highly Recommended
+* Recommended
+* Consider
+* Not Recommended
+
+---
+
+## 4. Développement du Matching Pipeline
+
+Le pipeline réalise automatiquement les opérations suivantes :
+
+1. chargement des CV au format JSON ;
+2. chargement des offres d'emploi ;
+3. comparaison des différents critères ;
+4. calcul du score final ;
+5. génération de la recommandation.
+
+---
+
+## 5. Automatisation du matching
+
+Le pipeline a été amélioré afin de traiter automatiquement tous les fichiers disponibles.
+
+Il parcourt récursivement :
+
+```text
+data/processed/parsed_CV/
+    ├── english/
+    └── french/
+```
+
+ainsi que toutes les offres présentes dans :
+
+```text
+data/processed/parsed_jobs/
+```
+
+Chaque CV est comparé avec toutes les offres disponibles.
+
+---
+
+## 6. Génération des résultats
+
+Les résultats de chaque comparaison sont enregistrés dans :
+
+```text
+data/processed/matching_results/
+```
+
+Chaque résultat contient notamment :
+
+* nom du candidat ;
+* langue du CV ;
+* intitulé du poste ;
+* score des compétences ;
+* score des études ;
+* score de l'expérience ;
+* score des langues ;
+* score des certifications ;
+* score global ;
+* recommandation.
+
+---
+
+# Difficultés rencontrées
+
+Plusieurs problèmes techniques ont été identifiés puis corrigés :
+
+* résolution des problèmes d'import Python entre les packages (`src`, `utils`, `matching`) ;
+* adaptation du moteur à la structure réelle des fichiers JSON ;
+* modification du module `education_matcher` pour prendre en charge une liste de diplômes ;
+* remplacement du champ `name` par `filename` dans les CV parsés ;
+* automatisation du parcours des dossiers `english` et `french`.
+
+---
+
+# Résultat obtenu
+
+Le moteur Rule-Based est désormais capable de :
+
+* parcourir automatiquement l'ensemble des CV ;
+* comparer chaque CV avec toutes les offres d'emploi ;
+* calculer un score de compatibilité pondéré ;
+* produire une recommandation automatique ;
+* préparer les données pour leur future insertion dans MySQL.
+
+---
+
+# Perspectives (Jour 8)
+
+Les prochaines améliorations porteront sur :
+
+* normalisation multilingue des compétences (français/anglais) ;
+* gestion des synonymes ;
+* comparaison approximative (Fuzzy Matching) ;
+* intégration de modèles de Machine Learning ;
+* comparaison sémantique avec DistilBERT ou Sentence Transformers ;
+* stockage des résultats dans MySQL ;
+* classement automatique des meilleurs candidats pour chaque offre.
+
+---
+
+# État du projet
+
+**Statut :** ✅ Jour 7 terminé
+
+Le moteur de matching basé sur des règles constitue désormais la première version de l'intelligence de SmartHire AI et servira de base à l'intégration des modèles d'IA dans les prochaines étapes du projet.
