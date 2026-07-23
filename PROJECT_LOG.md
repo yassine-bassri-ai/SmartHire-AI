@@ -719,3 +719,173 @@ Les prochaines améliorations porteront sur :
 **Statut :** ✅ Jour 7 terminé
 
 Le moteur de matching basé sur des règles constitue désormais la première version de l'intelligence de SmartHire AI et servira de base à l'intégration des modèles d'IA dans les prochaines étapes du projet.
+
+-----------------------------------------------------------------------------------------------
+
+#  Jour 8 — Construction du dataset Machine Learning et préparation des données
+
+##  Objectifs
+
+L'objectif de cette journée était de construire le dataset final destiné au Machine Learning à partir des CV analysés et des offres d'emploi prétraitées, puis de préparer les données pour l'entraînement des modèles de classification.
+
+---
+
+##  Tâches réalisées
+
+### 1. Construction du dataset Machine Learning
+
+Développement du module `dataset_builder.py` permettant de générer automatiquement un dataset de Machine Learning à partir des CV et des offres d'emploi.
+
+Fonctionnalités implémentées :
+
+- Chargement du dataset `job_applicant_dataset.csv`.
+- Prétraitement automatique des CV et des descriptions d'emploi.
+- Intégration du CV Parser.
+- Intégration du Job Parser.
+- Calcul automatique des scores de compatibilité entre un candidat et une offre.
+
+Les caractéristiques (features) calculées sont :
+
+- Skill Matching Score
+- Education Matching Score
+- Experience Matching Score
+- Language Matching Score
+- Certification Matching Score
+- Final Matching Score
+
+Ajout de la variable cible :
+
+- Best Match (0 / 1)
+
+---
+
+### 2. Génération du dataset final
+
+Création du dataset :
+
+```
+data/processed/machine_learning/matching_dataset.csv
+```
+
+Contenu du dataset :
+
+- 10 000 échantillons
+- 9 colonnes
+- Aucune valeur manquante
+- Aucun doublon
+
+Colonnes :
+
+- resume_id
+- job_title
+- skill_score
+- education_score
+- experience_score
+- language_score
+- certification_score
+- final_score
+- best_match
+
+---
+
+### 3. Validation du dataset
+
+Développement des modules :
+
+- `data_loader.py`
+- `dataset_validator.py`
+
+Contrôles effectués :
+
+- Chargement du dataset
+- Vérification des dimensions
+- Vérification des colonnes
+- Vérification des types de données
+- Détection des valeurs manquantes
+- Détection des doublons
+
+Toutes les validations ont été réalisées avec succès.
+
+---
+
+### 4. Préparation des données Machine Learning
+
+Développement des modules :
+
+- `data_splitter.py`
+- `feature_scaler.py`
+
+Fonctionnalités implémentées :
+
+- Séparation des données en ensembles d'entraînement et de test (80 % / 20 %).
+- Suppression des colonnes non utilisées pour l'entraînement (`resume_id` et `job_title`).
+- Normalisation des variables numériques avec `StandardScaler`.
+
+Résultats obtenus :
+
+- Train Set : 8000 échantillons
+- Test Set : 2000 échantillons
+
+Le pipeline de préparation des données est désormais entièrement opérationnel.
+
+---
+
+### 5. Tests réalisés
+
+Création des scripts de test :
+
+- `test_dataset_builder.py`
+- `test_ml_preparation.py`
+
+Résultats :
+
+- Génération correcte du dataset Machine Learning.
+- Validation complète des données.
+- Séparation Train/Test réussie.
+- Normalisation des variables sans erreur.
+
+Tous les tests ont été validés avec succès.
+
+---
+
+##  Nouveaux fichiers créés
+
+```
+src/
+└── machine_learning/
+    ├── dataset_builder.py
+    ├── data_loader.py
+    ├── dataset_validator.py
+    ├── data_splitter.py
+    └── feature_scaler.py
+
+tests/
+├── test_dataset_builder.py
+└── test_ml_preparation.py
+```
+
+---
+
+##  Résultat de la journée
+
+À l'issue de cette journée, SmartHire AI dispose d'une pipeline complète permettant :
+
+- de construire automatiquement un dataset de Machine Learning ;
+- d'extraire les caractéristiques de matching entre un CV et une offre d'emploi ;
+- de générer une variable cible (`best_match`) ;
+- de valider la qualité des données ;
+- de préparer les données pour l'entraînement des modèles de Machine Learning.
+
+Le projet est désormais prêt pour la phase d'entraînement et d'évaluation des modèles de classification.
+
+---
+
+##  Prochaine étape
+
+Jour 9 :
+
+- Développement des premiers modèles de Machine Learning.
+- Entraînement de Logistic Regression.
+- Évaluation des performances (Accuracy, Precision, Recall, F1-score et ROC-AUC).
+- Comparaison avec d'autres modèles (Decision Tree, Random Forest, SVM et XGBoost).
+- Sauvegarde automatique du meilleur modèle.
