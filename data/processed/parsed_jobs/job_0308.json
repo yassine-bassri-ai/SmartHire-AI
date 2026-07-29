@@ -1,5 +1,6 @@
 {
     "job_title": ".net, sharepoint, Java, Data analyst, Business Analyst",
+    "description": "{'language': 'en', 'cleaned_text': 'job description hi currently am looking opt candidates net sharepoint mulesoft java data analyst business analysr in usa if anyone interested can forward your resumes to thiis mail id abinaya j hexacorp com', 'tokens': ['job', 'description', 'hi', 'currently', 'look', 'opt', 'candidate', 'net', 'sharepoint', 'mulesoft', 'java', 'data', 'analyst', 'business', 'analysr', 'usa', 'interested', 'forward', 'resume', 'thiis', 'mail', 'd', 'abinaya', 'j', 'hexacorp', 'com'], 'processed_text': 'job description hi currently look opt candidate net sharepoint mulesoft java data analyst business analysr usa interested forward resume thiis mail d abinaya j hexacorp com'}",
     "skills": [
         "java"
     ],

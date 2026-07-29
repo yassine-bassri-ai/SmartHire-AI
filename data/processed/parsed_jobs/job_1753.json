@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst - Intelligent Automation",
+    "description": "{'language': 'en', 'cleaned_text': 'category etl business intelligence location fort worth texas data analyst rapid insightful analytics team intelligent automation rpa nlp ai and advanced analytics job summary provide specialization in advanced analytics to extract insight from information by iterating rapidly to summarize visualize large data sets this position will be details apply', 'tokens': ['category', 'etl', 'business', 'intelligence', 'location', 'fort', 'worth', 'texas', 'data', 'analyst', 'rapid', 'insightful', 'analytic', 'team', 'intelligent', 'automation', 'rpa', 'nlp', 'ai', 'advanced', 'analytic', 'job', 'summary', 'provide', 'specialization', 'advanced', 'analytic', 'extract', 'insight', 'information', 'iterate', 'rapidly', 'summarize', 'visualize', 'large', 'datum', 'set', 'position', 'detail', 'apply'], 'processed_text': 'category etl business intelligence location fort worth texas data analyst rapid insightful analytic team intelligent automation rpa nlp ai advanced analytic job summary provide specialization advanced analytic extract insight information iterate rapidly summarize visualize large datum set position detail apply'}",
     "skills": [
         "nlp"
     ],

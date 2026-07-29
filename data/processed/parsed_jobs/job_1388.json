@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "description": "{'language': 'en', 'cleaned_text': 'category business analyst location grapevine texas great opportunity for a data analyst to work with a leading global manufacturer located in grapevine tx employment full time direct hire salary expectation 70k to 80k location grapevine tx position summary the data analyst provides analytical and technical suppo details apply', 'tokens': ['category', 'business', 'analyst', 'location', 'grapevine', 'texas', 'great', 'opportunity', 'data', 'analyst', 'work', 'lead', 'global', 'manufacturer', 'locate', 'grapevine', 'tx', 'employment', 'time', 'direct', 'hire', 'salary', 'expectation', '70k', '80k', 'location', 'grapevine', 'tx', 'position', 'summary', 'data', 'analyst', 'provide', 'analytical', 'technical', 'suppo', 'detail', 'apply'], 'processed_text': 'category business analyst location grapevine texas great opportunity data analyst work lead global manufacturer locate grapevine tx employment time direct hire salary expectation 70k 80k location grapevine tx position summary data analyst provide analytical technical suppo detail apply'}",
     "skills": [],
     "education": [],
     "languages": [],

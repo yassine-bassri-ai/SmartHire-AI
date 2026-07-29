@@ -1,47 +1,19 @@
 import pandas as pd
 
 
-REQUIRED_COLUMNS = [
-
-    "skill_score",
-    "education_score",
-    "experience_score",
-    "language_score",
-    "certification_score",
-    "final_score",
-    "best_match"
-
-]
-
-
 def validate_dataset(df: pd.DataFrame):
 
-    print("=" * 50)
-    print("Validation")
-    print("=" * 50)
+    print("\n" + "=" * 60)
+    print("VALIDATION")
+    print("=" * 60)
 
-    for column in REQUIRED_COLUMNS:
+    print("\nColumns")
+    print(df.columns.tolist())
 
-        if column not in df.columns:
-
-            raise ValueError(
-                f"Colonne absente : {column}"
-            )
-
-    print("Toutes les colonnes existent.")
-
-    print()
-
-    print("Valeurs manquantes")
-
+    print("\nMissing values")
     print(df.isnull().sum())
 
-    print()
+    print("\nDuplicates :", df.duplicated().sum())
 
-    print("Doublons :", df.duplicated().sum())
-
-    print()
-
+    print("\nData types")
     print(df.dtypes)
-
-    return True

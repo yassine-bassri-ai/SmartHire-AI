@@ -1,5 +1,6 @@
 {
     "job_title": "Junior Data Analyst",
+    "description": "{'language': 'en', 'cleaned_text': 'junior data analyst location redmond wa duration till sep end junior data analyst excel skills sap crm nice to have but not necessary data entry', 'tokens': ['junior', 'datum', 'analyst', 'location', 'redmond', 'wa', 'duration', 'till', 'sep', 'end', 'junior', 'datum', 'analyst', 'excel', 'skill', 'sap', 'crm', 'nice', 'necessary', 'datum', 'entry'], 'processed_text': 'junior datum analyst location redmond wa duration till sep end junior datum analyst excel skill sap crm nice necessary datum entry'}",
     "skills": [
         "excel"
     ],

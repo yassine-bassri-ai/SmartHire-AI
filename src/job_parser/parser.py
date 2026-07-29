@@ -11,6 +11,8 @@ def parse_job(job_title, description):
 
         "job_title": job_title,
 
+        "description": description,
+
         "skills": extract_skills(description),
 
         "education": extract_education(description),

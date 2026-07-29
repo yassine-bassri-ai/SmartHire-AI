@@ -1,5 +1,6 @@
 {
     "job_title": "Technical Data Analyst Accounting",
+    "description": "{'language': 'en', 'cleaned_text': 'job title technical data analyst accounting location irving tx position type fulltime description we are looking for technical business analyst data analyst with accounting background candidate needs to have strong sql reporting development and etl experience should be well versed with basic and advance level sql coding skills', 'tokens': ['job', 'title', 'technical', 'data', 'analyst', 'accounting', 'location', 'irving', 'tx', 'position', 'type', 'fulltime', 'description', 'look', 'technical', 'business', 'analyst', 'data', 'analyst', 'accounting', 'background', 'candidate', 'need', 'strong', 'sql', 'reporting', 'development', 'etl', 'experience', 'verse', 'basic', 'advance', 'level', 'sql', 'coding', 'skill'], 'processed_text': 'job title technical data analyst accounting location irving tx position type fulltime description look technical business analyst data analyst accounting background candidate need strong sql reporting development etl experience verse basic advance level sql coding skill'}",
     "skills": [
         "sql"
     ],

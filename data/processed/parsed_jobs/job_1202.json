@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst / Tableau Developer",
+    "description": "{'language': 'en', 'cleaned_text': 'we are hiring data analyst tableau developer for our client role data analyst tableau developer duration long term contract location san antonio tx must have skills tableau design e2e dashborad creation data analytic', 'tokens': ['hire', 'datum', 'analyst', 'tableau', 'developer', 'client', 'role', 'datum', 'analyst', 'tableau', 'developer', 'duration', 'long', 'term', 'contract', 'location', 'san', 'antonio', 'tx', 'skill', 'tableau', 'design', 'e2e', 'dashborad', 'creation', 'datum', 'analytic'], 'processed_text': 'hire datum analyst tableau developer client role datum analyst tableau developer duration long term contract location san antonio tx skill tableau design e2e dashborad creation datum analytic'}",
     "skills": [
         "tableau"
     ],

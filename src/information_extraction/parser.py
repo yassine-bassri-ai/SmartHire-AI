@@ -15,6 +15,8 @@ def parse_cv(text: str, filename: str, language: str):
 
         "language": language,
 
+        "raw_text" : text,
+
         "skills": extract_skills(text),
 
         "education": extract_education(text),

@@ -1,5 +1,6 @@
 {
     "job_title": "Data/Report Analyst",
+    "description": "{'language': 'en', 'cleaned_text': 'color black mso ansi language en us mso fareast language en in mso bidi language ar sa lang en us should have an insurance background color black mso ansi language en us mso fareast language en in mso bidi language ar sa lang en us experience of working with adobe xd microstrategy acomona acumana', 'tokens': ['color', 'black', 'mso', 'ansi', 'language', 'en', 'mso', 'fareast', 'language', 'en', 'mso', 'bidi', 'language', 'ar', 'sa', 'lang', 'en', 'insurance', 'background', 'color', 'black', 'mso', 'ansi', 'language', 'en', 'mso', 'fareast', 'language', 'en', 'mso', 'bidi', 'language', 'ar', 'sa', 'lang', 'en', 'experience', 'work', 'adobe', 'xd', 'microstrategy', 'acomona', 'acumana'], 'processed_text': 'color black mso ansi language en mso fareast language en mso bidi language ar sa lang en insurance background color black mso ansi language en mso fareast language en mso bidi language ar sa lang en experience work adobe xd microstrategy acomona acumana'}",
     "skills": [],
     "education": [],
     "languages": [],

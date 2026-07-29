@@ -889,3 +889,381 @@ Jour 9 :
 - Évaluation des performances (Accuracy, Precision, Recall, F1-score et ROC-AUC).
 - Comparaison avec d'autres modèles (Decision Tree, Random Forest, SVM et XGBoost).
 - Sauvegarde automatique du meilleur modèle.
+
+-----------------------------------------------------------------------------------------
+
+# AI Recruitment Platform - PROJECT LOG
+
+## Jour 9 : Machine Learning Pipeline & Model Training
+
+### Objectif
+Mettre en place un pipeline complet de Machine Learning pour entraîner, comparer et sélectionner automatiquement le meilleur modèle de prédiction du matching entre un CV et une offre d'emploi.
+
+---
+
+## Travaux réalisés
+
+### 1. Construction du dataset Machine Learning
+
+- Création du générateur `dataset_builder_v2.py`.
+- Chargement récursif des CV JSON (`parsed_CV`).
+- Chargement récursif des offres JSON (`parsed_jobs`).
+- Génération de toutes les combinaisons CV ↔ Offre.
+- Construction d'un dataset contenant plus de **166 000 couples CV/Job**.
+
+---
+
+### 2. Feature Engineering
+
+Création de nouvelles caractéristiques utilisées pour l'entraînement :
+
+- Skill Features
+- Education Features
+- Experience Features
+- Language Features
+- Certification Features
+- TF-IDF Similarity
+- Cosine Similarity
+
+Toutes les features sont regroupées dans un Feature Builder unique.
+
+---
+
+### 3. Génération automatique des labels
+
+Création d'un générateur de labels basé sur des règles métier.
+
+Calcul :
+
+- Final Score
+- Best Match (0 / 1)
+- Recommendation
+
+Distribution obtenue :
+
+- Positive : ≈22 %
+- Negative : ≈78 %
+
+---
+
+### 4. Préparation des données
+
+Développement du pipeline de préparation :
+
+- Chargement du dataset
+- Validation des données
+- Sélection des variables
+- Train/Test Split
+- Feature Scaling (StandardScaler)
+
+Le scaler est automatiquement sauvegardé dans :
+
+artifacts/models/scaler.pkl
+
+---
+
+### 5. Développement des modèles
+
+Implémentation des modèles :
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- XGBoost
+
+Chaque modèle possède son propre module de création.
+
+---
+
+### 6. Pipeline d'entraînement
+
+Création d'un Trainer générique capable de :
+
+- entraîner n'importe quel modèle ;
+- mesurer le temps d'entraînement ;
+- réutiliser le même pipeline pour tous les modèles.
+
+---
+
+### 7. Évaluation automatique
+
+Développement d'un Evaluator générique.
+
+Calcul automatique de :
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- ROC-AUC
+- Confusion Matrix
+- Classification Report
+
+---
+
+### 8. Sélection automatique du meilleur modèle
+
+Création du système :
+
+- Comparison Table
+- LeaderBoard
+- Model Selector
+
+Fonctionnalités :
+
+- comparaison automatique de tous les modèles ;
+- sélection du meilleur selon le F1-Score.
+
+---
+
+### 9. Sauvegarde des résultats
+
+Développement :
+
+ResultSaver
+
+Sauvegarde automatique de :
+
+- model_comparison.csv
+- classification reports
+- confusion matrices
+
+---
+
+### 10. Sauvegarde des modèles
+
+Développement :
+
+ModelSaver
+
+Sauvegarde automatique de :
+
+- best_model.pkl
+- scaler.pkl
+
+---
+
+## Résultat
+
+Pipeline Machine Learning complet :
+
+Dataset
+↓
+Feature Engineering
+↓
+Train/Test Split
+↓
+Scaling
+↓
+Training
+↓
+Evaluation
+↓
+Model Comparison
+↓
+Best Model Selection
+↓
+Artifacts Saving
+
+Le projet dispose désormais d'une architecture modulaire, réutilisable et proche des standards industriels pour l'entraînement et l'évaluation de modèles de Machine Learning.
+
+------------------------------------------------------------------------------------
+
+## Day 10 – REST API Development with FastAPI
+
+
+
+## Objective
+
+Transformer le moteur d'inférence développé lors des jours précédents en une API REST professionnelle afin de permettre à des applications externes (Web, Mobile, Power BI ou autres services) d'interagir avec SmartHire AI.
+
+---
+
+## Tasks Completed
+
+### Sprint 10.1 – FastAPI Setup
+
+* Installation de FastAPI et Uvicorn
+* Création du module `src/api`
+* Initialisation de l'application REST
+* Configuration de la structure du projet
+
+---
+
+### Sprint 10.2 – API Configuration
+
+* Création du fichier `config.py`
+* Centralisation des paramètres de l'application
+* Configuration des informations de l'API :
+
+  * Nom
+  * Version
+  * Description
+* Configuration du middleware CORS
+
+---
+
+### Sprint 10.3 – Request & Response Schemas
+
+Création des modèles Pydantic :
+
+* ResumeSchema
+* JobSchema
+* PredictionRequest
+* PredictionResponse
+* BatchPredictionRequest
+
+Validation automatique des données reçues par l'API.
+
+---
+
+### Sprint 10.4 – Health Endpoint
+
+Création des routes :
+
+* GET `/`
+* GET `/health`
+
+Vérification de l'état de fonctionnement de l'API.
+
+---
+
+### Sprint 10.5 – Prediction Endpoint
+
+Création du endpoint :
+
+* POST `/predict`
+
+Fonctionnalités :
+
+* Validation des données
+* Génération des features
+* Chargement automatique du modèle
+* Prédiction ML
+* Retour des résultats :
+
+  * Prediction
+  * Probability
+  * Match Score
+  * Confidence
+  * Recommendation
+
+---
+
+### Sprint 10.6 – Batch Prediction
+
+Création du endpoint :
+
+* POST `/batch-predict`
+
+Fonctionnalités :
+
+* Prédiction de plusieurs CV
+* Comparaison avec plusieurs offres
+* Génération automatique des résultats en lot
+
+---
+
+### Sprint 10.7 – Exception Handling
+
+Gestion centralisée des erreurs :
+
+* ValueError
+* Internal Server Error
+* Réponses HTTP standardisées
+* Messages d'erreur explicites
+
+---
+
+### Sprint 10.8 – API Documentation
+
+Documentation automatique générée par FastAPI :
+
+* Swagger UI (`/docs`)
+* ReDoc (`/redoc`)
+
+Tests interactifs des endpoints sans développement frontend.
+
+---
+
+## New Files
+
+```text
+src/api/
+│
+├── __init__.py
+├── app.py
+├── config.py
+├── routes.py
+├── schemas.py
+├── dependencies.py
+└── exception_handlers.py
+```
+
+---
+
+## Features Added
+
+* REST API Architecture
+* FastAPI Integration
+* Automatic Request Validation
+* Automatic Response Serialization
+* Prediction Endpoint
+* Batch Prediction Endpoint
+* Health Check Endpoint
+* Exception Handling
+* Swagger Documentation
+* ReDoc Documentation
+* CORS Configuration
+
+---
+
+## Technologies Used
+
+* FastAPI
+* Uvicorn
+* Pydantic
+* Starlette
+* Machine Learning Pipeline
+* Scikit-Learn
+
+---
+
+## Project Status
+
+* CV Parsing ✅
+* Job Parsing ✅
+* NLP Pipeline ✅
+* Feature Engineering ✅
+* Dataset Builder ✅
+* Label Generation ✅
+* Machine Learning Training ✅
+* Model Evaluation ✅
+* Inference Engine ✅
+* REST API ✅
+
+---
+
+## Next Step (Day 11)
+
+Implémentation de la couche Base de Données :
+
+* Conception de la base MySQL
+* Création des tables
+* Connexion SQLAlchemy
+* CRUD Repository
+* Sauvegarde des CV
+* Sauvegarde des offres
+* Historique des prédictions
+* Gestion des utilisateurs
+* Intégration complète entre FastAPI et MySQL
+
+---
+
+## Conclusion
+
+Le moteur SmartHire AI est désormais accessible via une API REST moderne. Toutes les fonctionnalités de prédiction peuvent être utilisées par une application web, mobile ou un service externe grâce aux endpoints sécurisés et documentés automatiquement.
+
+--------------------------------------------------------------------------------------------
+
