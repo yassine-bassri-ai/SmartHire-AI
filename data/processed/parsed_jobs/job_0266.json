@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst - Analytics/SQL",
+    "company": "Lorven Technologies Inc",
     "description": "{'language': 'en', 'cleaned_text': 'experience with relational databases e g oracle sql server teradata luw db2 strong knowledge and experience with sql to conduct data analysis prior knowledge and experience with data analytics is a plus knowledge and experience with financial services wealth management data domain is a big plus', 'tokens': ['experience', 'relational', 'database', 'e', 'g', 'oracle', 'sql', 'server', 'teradata', 'luw', 'db2', 'strong', 'knowledge', 'experience', 'sql', 'conduct', 'datum', 'analysis', 'prior', 'knowledge', 'experience', 'datum', 'analytic', 'plus', 'knowledge', 'experience', 'financial', 'service', 'wealth', 'management', 'datum', 'domain', 'big', 'plus'], 'processed_text': 'experience relational database e g oracle sql server teradata luw db2 strong knowledge experience sql conduct datum analysis prior knowledge experience datum analytic plus knowledge experience financial service wealth management datum domain big plus'}",
     "skills": [
         "oracle",

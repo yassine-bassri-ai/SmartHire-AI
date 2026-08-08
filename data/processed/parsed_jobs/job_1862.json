@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst 127909",
+    "company": "Open Systems Technologies (NYC)",
     "description": "{'language': 'en', 'cleaned_text': 'a leading financial firm is seeking a data analyst to join their team in charlotte nc qualifications must have a bachelors degree in computer science or related field 5 years of relevant hands on experience data analysis data mapping experience oracle database experience pl sql banking financial experience apply', 'tokens': ['lead', 'financial', 'firm', 'seek', 'data', 'analyst', 'join', 'team', 'charlotte', 'nc', 'qualification', 'bachelor', 'degree', 'computer', 'science', 'relate', 'field', '5', 'year', 'relevant', 'hand', 'experience', 'datum', 'analysis', 'datum', 'mapping', 'experience', 'oracle', 'database', 'experience', 'pl', 'sql', 'banking', 'financial', 'experience', 'apply'], 'processed_text': 'lead financial firm seek data analyst join team charlotte nc qualification bachelor degree computer science relate field 5 year relevant hand experience datum analysis datum mapping experience oracle database experience pl sql banking financial experience apply'}",
     "skills": [
         "oracle",

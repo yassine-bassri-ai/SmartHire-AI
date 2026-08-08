@@ -3,13 +3,19 @@ from sklearn.model_selection import train_test_split
 
 def split_dataset(df):
 
-    X = df.drop(
-        columns=[
-            "resume_id",
-            "job_title",
-            "best_match"
-        ]
-    )
+    columns_to_drop = [
+        "resume_id",
+        "job_id",
+        "best_match"
+    ]
+
+    # Supprime uniquement les colonnes qui existent
+    columns_to_drop = [
+        col for col in columns_to_drop
+        if col in df.columns
+    ]
+
+    X = df.drop(columns=columns_to_drop)
 
     y = df["best_match"]
 

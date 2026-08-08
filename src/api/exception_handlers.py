@@ -3,47 +3,28 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 
 
-async def value_error_handler(
+def register_exception_handlers(app):
 
-    request: Request,
+    @app.exception_handler(Exception)
 
-    exc: ValueError
+    async def global_exception_handler(
 
-):
+        request: Request,
 
-    return JSONResponse(
+        exc: Exception
 
-        status_code=400,
+    ):
 
-        content={
+        return JSONResponse(
 
-            "error":
+            status_code=500,
 
-            str(exc)
+            content={
 
-        }
+                "success": False,
 
-    )
+                "error": str(exc)
 
+            }
 
-async def generic_handler(
-
-    request: Request,
-
-    exc: Exception
-
-):
-
-    return JSONResponse(
-
-        status_code=500,
-
-        content={
-
-            "error":
-
-            "Internal Server Error"
-
-        }
-
-    )
+        )

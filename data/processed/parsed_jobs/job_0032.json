@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "NALLAS CORPORATION",
     "description": "{'language': 'en', 'cleaned_text': 'data analyst jersey city nj 12 months contract extensive experience in data analysis experience in profiling the data data gaps data quality etc discoveringcreating data dictionary creating specifications experience in data governance tools is a plus', 'tokens': ['data', 'analyst', 'jersey', 'city', 'nj', '12', 'month', 'contract', 'extensive', 'experience', 'datum', 'analysis', 'experience', 'profile', 'data', 'data', 'gap', 'datum', 'quality', 'etc', 'discoveringcreate', 'datum', 'dictionary', 'create', 'specification', 'experience', 'data', 'governance', 'tool', 'plus'], 'processed_text': 'data analyst jersey city nj 12 month contract extensive experience datum analysis experience profile data data gap datum quality etc discoveringcreate datum dictionary create specification experience data governance tool plus'}",
     "skills": [],
     "education": [],

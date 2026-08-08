@@ -11,7 +11,7 @@ from pathlib import Path
 def load_training_dataset():
 
     path = Path(
-        "data/processed/machine_learning/matching_dataset_train.csv"
+        "data/processed/machine_learning/matching_dataset_labeled.csv"
     )
 
     df = pd.read_csv(path)

@@ -18,8 +18,8 @@ from  src.machine_learning.data_loader import load_dataset
 from  src.machine_learning.data_splitter import split_dataset
 from  src.machine_learning.feature_scaler import scale_features
 
-from  machine_learning.training.trainer import Trainer
-from  machine_learning.training.saver import ModelSaver
+from  src.machine_learning.training.trainer import Trainer
+from  src.machine_learning.training.model_saver import ModelSaver
 
 
 # ------------------------------------------------------------------
@@ -32,7 +32,7 @@ print("=" * 60)
 
 dataset = load_dataset(
     PROJECT_ROOT /
-    "data/processed/machine_learning/matching_dataset.csv"
+    "data/processed/machine_learning/matching_dataset_labeled.csv"
 )
 
 print(f"\nDataset chargé : {dataset.shape}")
@@ -57,83 +57,143 @@ scaler, X_train, X_test = scale_features(
     X_test
 )
 
-print("\nScaling terminé.")
+import joblib
+from pathlib import Path
+
+models_dir = Path("artifacts/models")
+models_dir.mkdir(parents=True, exist_ok=True)
+
+joblib.dump(scaler, models_dir / "scaler.pkl")
+
+print("✅ Scaler sauvegardé :", models_dir / "scaler.pkl")
+
+from src.machine_learning.training.model_selector import ModelSelector
+
+from src.machine_learning.models.logistic_regression import LogisticRegression
+from src.machine_learning.models.decision_tree import DecisionTreeClassifier
+from src.machine_learning.models.random_forest import RandomForestClassifier
+from src.machine_learning.models.svm_model import SVC
+from src.machine_learning.models.xgboost_model import XGBClassifier
 
 
-# ------------------------------------------------------------------
-# Entraînement
-# ------------------------------------------------------------------
+selector = ModelSelector()
 
-trainer = Trainer()
-
-best_result = trainer.train_all(
-
-    X_train=X_train,
-
-    y_train=y_train,
-
-    X_test=X_test,
-
-    y_test=y_test
-
+selector.evaluate(
+    LogisticRegression(),
+    "Logistic Regression",
+    X_train,
+    y_train,
+    X_test,
+    y_test
 )
+
+selector.evaluate(
+    DecisionTreeClassifier(),
+    "Decision Tree",
+    X_train,
+    y_train,
+    X_test,
+    y_test
+)
+
+selector.evaluate(
+    RandomForestClassifier(),
+    "Random Forest",
+    X_train,
+    y_train,
+    X_test,
+    y_test
+)
+
+selector.evaluate(
+    SVC(),
+    "SVM",
+    X_train,
+    y_train,
+    X_test,
+    y_test
+)
+
+selector.evaluate(
+    XGBClassifier(),
+    "XGBoost",
+    X_train,
+    y_train,
+    X_test,
+    y_test
+)
+
+best_model, best_name, best_metrics = selector.summary()
+
+# ============================
+# FORCER RANDOM FOREST
+# ============================
+
+best_model = selector.models["Random Forest"]
+best_name = "Random Forest"
+
+print("\nScaling terminé.")
 
 
 # ------------------------------------------------------------------
 # Sauvegarde
 # ------------------------------------------------------------------
 
-saver = ModelSaver(
+saver = ModelSaver()
 
-    PROJECT_ROOT /
+saver.save(
 
-    "artifacts/models"
+    best_model,
 
-)
-
-saver.save_model(
-
-    best_result.trained_model,
-
-    "best_model.pkl"
+    best_name
 
 )
 
-saver.save_scaler(
+from src.database.model_repository import ModelRepository
 
-    scaler
+repository = ModelRepository()
+
+repository.insert(
+
+    model_name=best_name,
+
+    accuracy=best_metrics["accuracy"],
+
+    precision=best_metrics["precision"],
+
+    recall=best_metrics["recall"],
+
+    f1=best_metrics["f1"],
+
+    roc_auc=best_metrics["roc_auc"]
 
 )
+
+print("Model history saved to MySQL.")
 
 
 # ------------------------------------------------------------------
 # Résumé
 # ------------------------------------------------------------------
 
-print("\n")
+print()
 
 print("=" * 60)
-
 print("TRAINING FINISHED")
-
 print("=" * 60)
 
 print()
 
-print("Best Model :", best_result.model_name)
+print("Best Model :", best_name)
 
-print(f"Accuracy   : {best_result.accuracy:.4f}")
+print("Accuracy   :", round(best_metrics["accuracy"], 4))
+print("Precision  :", round(best_metrics["precision"], 4))
+print("Recall     :", round(best_metrics["recall"], 4))
+print("F1 Score   :", round(best_metrics["f1"], 4))
 
-print(f"Precision  : {best_result.precision:.4f}")
-
-print(f"Recall     : {best_result.recall:.4f}")
-
-print(f"F1 Score   : {best_result.f1_score:.4f}")
-
-print(f"ROC AUC    : {best_result.roc_auc:.4f}")
+if "roc_auc" in best_metrics:
+    print("ROC AUC    :", round(best_metrics["roc_auc"], 4))
 
 print()
 
-print("Model saved inside :")
-
-print("artifacts/models/")
+print("Model saved inside artifacts/models/")

@@ -1,5 +1,6 @@
 {
     "job_title": "DATA WAREHOUSE ANALYST III",
+    "company": "Sharpedge Solutions Inc",
     "description": "{'language': 'en', 'cleaned_text': 'jd â data warehouse analyst iii â 15 years of experience in software development â 10 years of experience in oracle 10g or 11g â 10 years of experience in oracle pl sql development â 5 years of experience in unix shell script development â 5 years of experience in a data warehouse environment â strong analytical and troubleshooting skills â team player â', 'tokens': ['jd', 'â', 'data', 'warehouse', 'analyst', 'iii', 'â', '15', 'year', 'experience', 'software', 'development', 'â', '10', 'year', 'experience', 'oracle', '10', 'g', '11', 'g', 'â', '10', 'year', 'experience', 'oracle', 'pl', 'sql', 'development', 'â', '5', 'year', 'experience', 'unix', 'shell', 'script', 'development', 'â', '5', 'year', 'experience', 'data', 'warehouse', 'environment', 'â', 'strong', 'analytical', 'troubleshooting', 'skill', 'â', 'team', 'player', 'â'], 'processed_text': 'jd â data warehouse analyst iii â 15 year experience software development â 10 year experience oracle 10 g 11 g â 10 year experience oracle pl sql development â 5 year experience unix shell script development â 5 year experience data warehouse environment â strong analytical troubleshooting skill â team player â'}",
     "skills": [
         "oracle",

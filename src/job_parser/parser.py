@@ -5,11 +5,13 @@ from src.extractors.language_extractor import extract_languages
 from src.extractors.experience_extractor import extract_years_of_experience
 
 
-def parse_job(job_title, description):
+def parse_job(job_title, company, description):
 
     result = {
 
         "job_title": job_title,
+
+        "company": company,
 
         "description": description,
 

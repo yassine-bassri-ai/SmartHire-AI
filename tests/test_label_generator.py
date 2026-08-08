@@ -1,58 +1,19 @@
 from pathlib import Path
 
-import pandas as pd
-
 from src.machine_learning.label_generator import (
-    build_training_dataset
+    generate_labels
 )
 
-dataset = pd.read_csv(
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-    Path(
-        "data/processed/machine_learning/matching_dataset_v2.csv"
-    )
+generate_labels(
 
-)
+    PROJECT_ROOT /
 
-dataset = build_training_dataset(dataset)
+    "data/processed/machine_learning/matching_dataset_v2.csv",
 
-output = Path(
+    PROJECT_ROOT /
 
-    "data/processed/machine_learning/matching_dataset_train.csv"
-
-)
-
-dataset.to_csv(
-
-    output,
-
-    index=False
-
-)
-
-print()
-
-print(dataset.head())
-
-print()
-
-print(dataset.shape)
-print("\nDistribution des labels")
-
-print(
-
-    dataset["best_match"]
-
-    .value_counts()
-
-)
-
-print()
-
-print(
-
-    dataset["best_match"]
-
-    .value_counts(normalize=True)
+    "data/processed/machine_learning/matching_dataset_labeled.csv"
 
 )

@@ -1,5 +1,6 @@
 {
     "job_title": "Language Data Analyst",
+    "company": "TransPerfect",
     "description": "{'language': 'en', 'cleaned_text': 'transperfect is more than just a job our greatest asset is our people and nothing is more important to us than ensuring that everyone knows that each of our 90 offices has its own individual identity and each also has its own unique rewards locations us tempe az 1725 greentree', 'tokens': ['transperfect', 'job', 'great', 'asset', 'people', 'important', 'ensure', 'know', '90', 'office', 'individual', 'identity', 'unique', 'reward', 'location', 'tempe', 'az', '1725', 'greentree'], 'processed_text': 'transperfect job great asset people important ensure know 90 office individual identity unique reward location tempe az 1725 greentree'}",
     "skills": [],
     "education": [],

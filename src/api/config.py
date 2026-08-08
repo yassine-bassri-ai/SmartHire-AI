@@ -1,19 +1,25 @@
-from pydantic import BaseModel
+from pydantic_settings import BaseSettings
 
 
-class Settings(BaseModel):
+class Settings(BaseSettings):
 
-    APP_NAME: str = "SmartHire AI API"
+    PROJECT_NAME: str = "SmartHire AI"
 
     VERSION: str = "1.0.0"
 
     DESCRIPTION: str = (
-        "AI Recruitment Platform REST API"
+
+        "AI Recruitment Platform powered by NLP, Machine Learning and DistilBERT"
+
     )
 
-    HOST: str = "127.0.0.1"
+    MYSQL_HOST: str = "localhost"
 
-    PORT: int = 8000
+    MYSQL_USER: str = "smarthire"
+
+    MYSQL_PASSWORD: str = "SmartHire123!"
+
+    MYSQL_DATABASE: str = "smarthire_ai"
 
 
 settings = Settings()

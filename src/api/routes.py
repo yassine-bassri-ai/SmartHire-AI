@@ -1,130 +1,20 @@
-from fastapi import APIRouter
+from src.api.routers.resume_router import router as resume_router
+from src.api.routers.job_router import router as job_router
+from src.api.routers.prediction_router import router as prediction_router
+from src.api.routers.model_router import router as model_router
+from src.api.routers.dashboard_router import router as dashboard_router
+from src.api.routers.matching_router import router as matching_router
+from src.api.routers.analytics import router as analytics_router
 
-from src.api.schemas import (
-    PredictionRequest,
-    PredictionResponse
-)
+def register_routes(app):
+    app.include_router(resume_router)
+    app.include_router(job_router)
+    app.include_router(prediction_router)
+    app.include_router(model_router)
+    app.include_router(dashboard_router)
+    app.include_router(matching_router)
+    app.include_router(analytics_router)
 
-from src.inference.prediction_pipeline import (
-    PredictionPipeline
-)
+    
 
-from src.api.schemas import BatchPredictionRequest
-
-from src.inference.batch_predictor import BatchPredictor
-
-router = APIRouter()
-
-batch = BatchPredictor()
-
-@router.post("/batch-predict")
-
-def batch_predict(
-
-    request: BatchPredictionRequest
-
-):
-
-    dataframe = batch.predict_all(
-
-        [
-
-            r.model_dump()
-
-            for r in request.resumes
-
-        ],
-
-        [
-
-            j.model_dump()
-
-            for j in request.jobs
-
-        ]
-
-    )
-
-    return dataframe.to_dict(
-
-        orient="records"
-
-    )
-
-
-
-
-@router.get("/")
-def home():
-
-    return {
-
-        "application": "SmartHire AI",
-
-        "version": "1.0.0",
-
-        "status": "running"
-
-    }
-
-
-@router.get("/health")
-def health():
-
-    return {
-
-        "status": "healthy",
-
-        "model": "loaded",
-
-        "api": "online"
-
-    }
-
-pipeline = PredictionPipeline()
-
-@router.post(
-
-    "/predict",
-
-    response_model=PredictionResponse
-
-)
-
-def predict(
-
-    request: PredictionRequest
-
-):
-
-    result = pipeline.predict(
-
-        request.resume.model_dump(),
-
-        request.job.model_dump()
-
-    )
-
-    return {
-
-        "prediction":
-
-        result["prediction"],
-
-        "probability":
-
-        result["probability"],
-
-        "match_score":
-
-        result["match_score"],
-
-        "confidence":
-
-        result["confidence"],
-
-        "recommendation":
-
-        result["recommendation"]
-
-    }
+    

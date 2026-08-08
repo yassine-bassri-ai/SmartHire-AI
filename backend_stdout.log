@@ -1,0 +1,23 @@
+MySQL connected.
+MySQL connected.
+MySQL connected.
+================================================================================
+MODEL PATH : C:\Users\yassi\OneDrive\Desktop\SmartHireAi\SmartHire-AI\artifacts\models\best_model.pkl
+SCALER PATH: C:\Users\yassi\OneDrive\Desktop\SmartHireAi\SmartHire-AI\artifacts\models\scaler.pkl
+Model features : 26
+Scaler features: 26
+================================================================================
+MySQL connected.
+MySQL connected.
+MySQL connected.
+INFO:     127.0.0.1:52601 - "GET /resume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52601 - "GET /job HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52601 - "GET /job/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52738 - "GET /job HTTP/1.1" 200 OK
+Resume JSON : data\processed\parsed_CV\english\Abdelrahman_Mohamed.json
+INFO:     127.0.0.1:52760 - "GET /resume/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52760 - "GET /job/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52772 - "DELETE /resume/99999 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52772 - "DELETE /job/99999 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55933 - "OPTIONS /job/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55933 - "POST /job/upload HTTP/1.1" 500 Internal Server Error

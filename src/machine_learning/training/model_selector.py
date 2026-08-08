@@ -14,6 +14,8 @@ class ModelSelector:
 
         self.board = LeaderBoard()
 
+        self.models = {}
+
     def evaluate(
 
         self,
@@ -47,6 +49,8 @@ class ModelSelector:
             y_train
 
         )
+
+        self.models[model_name] = trained_model
 
         evaluator = Evaluator(
 

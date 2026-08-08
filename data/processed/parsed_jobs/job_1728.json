@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "SNI Technology",
     "description": "{'language': 'en', 'cleaned_text': 'experience 5 years of sql server experience experience with power bi or similar reporting packages verbal and written communication skills experience managing data in various formats adept at queries report writing and presenting findings ability to collaborate effectively and work as part of a team experiecne with data modeling and warehousing', 'tokens': ['experience', '5', 'year', 'sql', 'server', 'experience', 'experience', 'power', 'bi', 'similar', 'reporting', 'package', 'verbal', 'write', 'communication', 'skill', 'experience', 'manage', 'datum', 'format', 'adept', 'query', 'report', 'write', 'present', 'finding', 'ability', 'collaborate', 'effectively', 'work', 'team', 'experiecne', 'datum', 'modeling', 'warehousing'], 'processed_text': 'experience 5 year sql server experience experience power bi similar reporting package verbal write communication skill experience manage datum format adept query report write present finding ability collaborate effectively work team experiecne datum modeling warehousing'}",
     "skills": [
         "power bi",

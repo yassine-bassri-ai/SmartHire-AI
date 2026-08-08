@@ -9,13 +9,13 @@ from src.machine_learning.data_loader import load_dataset
 from src.machine_learning.dataset_validator import validate_dataset
 from src.machine_learning.data_splitter import split_dataset
 from src.machine_learning.feature_scaler import scale_features
-from src.machine_learning.label_encoder import encode_labels
+
 
 
 dataset = load_dataset(
 
     PROJECT_ROOT /
-    "data/processed/machine_learning/matching_dataset.csv"
+    "data/processed/machine_learning/matching_dataset_labeled.csv"
 
 )
 

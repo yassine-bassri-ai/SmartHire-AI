@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "Softova Inc",
     "description": "{'language': 'en', 'cleaned_text': '5 years of experience in sql development methodologies r and python experience using tableau experience in relational databases good to have experience in automation in python andor r must possess effective verbal and written communication skills excellent consulting skills and the ability to work effectively with clients and team members', 'tokens': ['5', 'year', 'experience', 'sql', 'development', 'methodology', 'r', 'python', 'experience', 'tableau', 'experience', 'relational', 'database', 'good', 'experience', 'automation', 'python', 'andor', 'r', 'possess', 'effective', 'verbal', 'write', 'communication', 'skill', 'excellent', 'consulting', 'skill', 'ability', 'work', 'effectively', 'client', 'team', 'member'], 'processed_text': '5 year experience sql development methodology r python experience tableau experience relational database good experience automation python andor r possess effective verbal write communication skill excellent consulting skill ability work effectively client team member'}",
     "skills": [
         "python",

@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "1",
     "description": "{'language': 'fr', 'cleaned_text': 'job description etl sql queries data modeling etc sap experience is plus', 'tokens': ['job', 'description', 'etl', 'sql', 'querie', 'data', 'modeling', 'sap', 'experience', 'is'], 'processed_text': 'job description etl sql querie data modeling sap experience is'}",
     "skills": [
         "sql"

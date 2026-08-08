@@ -1,5 +1,6 @@
 {
     "job_title": "ETL Developer / Data Analyst",
+    "company": "Blue Rock Consulting",
     "description": "{'language': 'en', 'cleaned_text': 'leading financial firm has a fulltime opening for an etl developer that has strong data analysis skills strong sql as well as able to read python code experience with data visualization excellent communication skills are a must no agencies please this is a fulltime position', 'tokens': ['lead', 'financial', 'firm', 'fulltime', 'opening', 'etl', 'developer', 'strong', 'datum', 'analysis', 'skill', 'strong', 'sql', 'able', 'read', 'python', 'code', 'experience', 'datum', 'visualization', 'excellent', 'communication', 'skill', 'agency', 'fulltime', 'position'], 'processed_text': 'lead financial firm fulltime opening etl developer strong datum analysis skill strong sql able read python code experience datum visualization excellent communication skill agency fulltime position'}",
     "skills": [
         "python",

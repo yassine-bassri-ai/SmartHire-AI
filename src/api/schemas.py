@@ -3,43 +3,11 @@ from pydantic import BaseModel
 from typing import List
 
 
-class ResumeSchema(BaseModel):
-
-    filename: str
-
-    language: str
-
-    skills: List[str]
-
-    education: List[str]
-
-    experience_years: int
-
-    languages: List[str]
-
-    certifications: List[str]
-
-
-class JobSchema(BaseModel):
-
-    job_title: str
-
-    skills: List[str]
-
-    education: List[str]
-
-    experience_years: int
-
-    languages: List[str]
-
-    certifications: List[str]
-
-
 class PredictionRequest(BaseModel):
 
-    resume: ResumeSchema
+    resume_id: str
 
-    job: JobSchema
+    job_id: str
 
 
 class PredictionResponse(BaseModel):
@@ -48,17 +16,31 @@ class PredictionResponse(BaseModel):
 
     probability: float
 
-    match_score: float
-
-    confidence: str
-
     recommendation: str
 
-from typing import List
+
+class HealthResponse(BaseModel):
+
+    status: str
+
+    project: str
 
 
-class BatchPredictionRequest(BaseModel):
+class ResumeResponse(BaseModel):
 
-    resumes: List[ResumeSchema]
+    id: int
 
-    jobs: List[JobSchema]
+    filename: str
+
+    language: str
+
+    experience_years: int
+
+
+class JobResponse(BaseModel):
+
+    id: int
+
+    title: str
+
+    company: str

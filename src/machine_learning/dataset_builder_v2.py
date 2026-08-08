@@ -8,6 +8,11 @@ from src.matching.feature_engineering.feature_builder import (
     build_features
 )
 
+from sklearn.metrics.pairwise import cosine_similarity
+
+from src.embeddings.embedding_loader import (
+    EmbeddingLoader
+)
 
 def load_json_folder(folder):
 
@@ -53,6 +58,14 @@ def build_dataset(
 
     current = 0
 
+    cv_loader = EmbeddingLoader(
+        "artifacts/embeddings/cv_embeddings.pkl"
+    )
+
+    job_loader = EmbeddingLoader(
+        "artifacts/embeddings/job_embeddings.pkl"
+    )
+
     for resume in resumes:
 
         for job in jobs:
@@ -68,13 +81,33 @@ def build_dataset(
             )
 
             features = build_features(
-
                 resume,
-
                 job
-
             )
 
+            resume_embedding = cv_loader.get(
+                resume["id"]
+            )
+
+            job_embedding = job_loader.get(
+                job["id"]
+            )
+
+            semantic_similarity = cosine_similarity(
+
+                [resume_embedding],
+
+                [job_embedding]
+
+            )[0][0]
+
+            features["semantic_similarity"] = round(
+
+                float(semantic_similarity),
+
+                4
+
+            )
             row = {
 
                 "resume_id":

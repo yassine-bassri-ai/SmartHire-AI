@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "Lorven Technologies Inc",
     "description": "{'language': 'en', 'cleaned_text': 'prior experience in using tableau and different db data sources ability to understand technical issues at a high level problem solving and critical thinking skills create clear and concise documentation experience working with virtual and remote team participants strong interpersonal and written communication and presentation skills', 'tokens': ['prior', 'experience', 'tableau', 'different', 'db', 'datum', 'source', 'ability', 'understand', 'technical', 'issue', 'high', 'level', 'problem', 'solving', 'critical', 'thinking', 'skill', 'create', 'clear', 'concise', 'documentation', 'experience', 'work', 'virtual', 'remote', 'team', 'participant', 'strong', 'interpersonal', 'write', 'communication', 'presentation', 'skill'], 'processed_text': 'prior experience tableau different db datum source ability understand technical issue high level problem solving critical thinking skill create clear concise documentation experience work virtual remote team participant strong interpersonal write communication presentation skill'}",
     "skills": [
         "tableau"

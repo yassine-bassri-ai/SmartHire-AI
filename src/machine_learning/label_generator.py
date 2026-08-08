@@ -1,67 +1,107 @@
 import pandas as pd
 
 
-WEIGHTS = {
-    "skills": 0.45,
-    "education": 0.20,
-    "experience": 0.15,
-    "languages": 0.10,
-    "certifications": 0.10,
-}
+def compute_label(row):
+
+    score = 0
+
+    # ------------------------------------------------------
+    # Skills
+    # ------------------------------------------------------
+
+    if row["skill_overlap_ratio"] >= 0.60:
+        score += 2
+
+    if row["skill_jaccard"] >= 0.50:
+        score += 1
+
+    # ------------------------------------------------------
+    # Education
+    # ------------------------------------------------------
+
+    if row["education_match"] == 1:
+        score += 1
+
+    # ------------------------------------------------------
+    # Experience
+    # ------------------------------------------------------
+
+    if row["experience_match"] == 1:
+        score += 1
+
+    if row["experience_ratio"] >= 0.80:
+        score += 1
+
+    # ------------------------------------------------------
+    # Languages
+    # ------------------------------------------------------
+
+    if row["language_overlap"] >= 0.50:
+        score += 1
+
+    # ------------------------------------------------------
+    # Certifications
+    # ------------------------------------------------------
+
+    if row["certification_overlap"] >= 0.50:
+        score += 1
+
+    # ------------------------------------------------------
+    # TF-IDF Similarity
+    # ------------------------------------------------------
+
+    if row["tfidf_similarity"] >= 0.35:
+        score += 1
+
+    # ------------------------------------------------------
+    # Semantic Similarity (DistilBERT)
+    # ------------------------------------------------------
+
+    if row["semantic_similarity"] >= 0.70:
+        score += 2
+
+    # ------------------------------------------------------
+    # Final Label
+    # ------------------------------------------------------
+
+    return 1 if score >= 6 else 0
 
 
-def compute_final_score(row):
 
-    skills = row["skill_overlap_ratio"] * 100
+def generate_labels(input_csv, output_csv):
+    df = pd.read_csv(input_csv)
 
-    education = row["education_match"] * 100
+    print()
+    print("=" * 60)
+    print("Generating labels...")
+    print("=" * 60)
 
-    experience = row["experience_match"] * 100
+    df["best_match"] = df.apply(
 
-    languages = row["language_overlap"] * 100
-
-    certifications = row["certification_overlap"] * 100
-
-    score = (
-
-        skills * WEIGHTS["skills"]
-
-        + education * WEIGHTS["education"]
-
-        + experience * WEIGHTS["experience"]
-
-        + languages * WEIGHTS["languages"]
-
-        + certifications * WEIGHTS["certifications"]
-
-    )
-
-    return round(score, 2)
-
-
-def generate_label(score):
-
-    return int(score >= 70)
-
-
-def build_training_dataset(df):
-
-    print("\nGenerating labels...")
-
-    df["final_score"] = df.apply(
-
-        compute_final_score,
+        compute_label,
 
         axis=1
 
     )
 
-    df["best_match"] = df["final_score"].apply(
+    df.to_csv(
 
-        generate_label
+        output_csv,
+
+        index=False
 
     )
 
-    print("Done.")
+    print()
+    print(df.head())
+    print()
 
-    return df
+    print("Dataset Shape :", df.shape)
+    print()
+
+    print("Label Distribution")
+    print(df["best_match"].value_counts())
+    print()
+
+    print("Label Ratio")
+    print(df["best_match"].value_counts(normalize=True))

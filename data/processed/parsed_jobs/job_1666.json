@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst II",
+    "company": "Texas Facilities Commission",
     "description": "{'language': 'en', 'cleaned_text': 'title fy 20 85 data analyst ii description location austin texas details job details pdf number of openings 1 open date 05 21 2020 close date back to all postings', 'tokens': ['title', 'fy', '20', '85', 'datum', 'analyst', 'ii', 'description', 'location', 'austin', 'texas', 'details', 'job', 'detail', 'pdf', 'number', 'opening', '1', 'open', 'date', '05', '21', '2020', 'close', 'date', 'posting'], 'processed_text': 'title fy 20 85 datum analyst ii description location austin texas details job detail pdf number opening 1 open date 05 21 2020 close date posting'}",
     "skills": [],
     "education": [],

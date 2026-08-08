@@ -1,5 +1,6 @@
 {
     "job_title": "Data Analyst",
+    "company": "iSpace, Inc",
     "description": "{'language': 'en', 'cleaned_text': 'data analyst location glendale ca duration 3 months contract client is looking for data analyst to build reports run statistical analysis etc', 'tokens': ['data', 'analyst', 'location', 'glendale', 'duration', '3', 'month', 'contract', 'client', 'look', 'data', 'analyst', 'build', 'report', 'run', 'statistical', 'analysis', 'etc'], 'processed_text': 'data analyst location glendale duration 3 month contract client look data analyst build report run statistical analysis etc'}",
     "skills": [],
     "education": [],

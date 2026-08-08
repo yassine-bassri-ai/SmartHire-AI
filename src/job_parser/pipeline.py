@@ -17,6 +17,7 @@ def parse_jobs(csv_file: Path, output_folder: Path):
 
         job = parse_job(
             row["Job Title"],
+            str(row["Company Name"]).split("\n")[0].strip(),
             row["Clean_Job_Description"]
         )
 

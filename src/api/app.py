@@ -2,21 +2,17 @@ from fastapi import FastAPI
 
 from fastapi.middleware.cors import CORSMiddleware
 
+from src.api.routes import register_routes
+
+from src.api.exception_handlers import register_exception_handlers
+
 from src.api.config import settings
 
-from src.api.routes import router
 
-from src.api.exception_handlers import (
-
-    value_error_handler,
-
-    generic_handler
-
-)
 
 app = FastAPI(
 
-    title=settings.APP_NAME,
+    title=settings.PROJECT_NAME,
 
     version=settings.VERSION,
 
@@ -24,42 +20,22 @@ app = FastAPI(
 
 )
 
-# ------------------------------------
-# CORS
-# ------------------------------------
-
+# Allow the Vite dev server (and any local client) to call the API.
 app.add_middleware(
-
     CORSMiddleware,
-
-    allow_origins=["*"],
-
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+    ],
+    allow_origin_regex="http://(localhost|127\\.0\\.0\\.1):\\d+.*",
     allow_credentials=True,
-
     allow_methods=["*"],
-
-    allow_headers=["*"]
-
+    allow_headers=["*"],
 )
 
-app.add_exception_handler(
+register_routes(app)
 
-    ValueError,
+register_exception_handlers(app)
 
-    value_error_handler
 
-)
-
-app.add_exception_handler(
-
-    Exception,
-
-    generic_handler
-
-)
-
-# ------------------------------------
-# Routes
-# ------------------------------------
-
-app.include_router(router)

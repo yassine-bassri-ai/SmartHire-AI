@@ -1,1269 +1,708 @@
-### PROJECT_LOG
+# SMART HIRE AI — PROJECT LOG
 
-Date : 12/07/2026
+## Jour 1 — Initialisation du projet
 
-### Objectif :
-* Définir le projet et préparer l'environnement.
-
-### Travaux réalisés :
-* Définition des objectifs.
-* Choix des technologies.
-* Création de la structure du projet.
-* Initialisation de Git.
-
-### Problèmes rencontrés :
-...
-
-### Solutions :
-...
-
-### Temps de travail :
-...
-
-### À faire demain :
-  * Recherche et analyse des jeux de données.
-
-------------------------------------------------------------------------------------------------------------------
-
-## Jour 2 et 3 - Analyse du problème et conception du projet et Recherche et sélection des jeux de données 
-
-### Date: 13/07/2026
+**Date : 12/07/2026**
 
 ### Objectif
-
-Identifier les besoins du projet et concevoir le pipeline global avant de commencer le développement et sélectionner les jeux de données qui serviront au développement de SmartHire AI.
+Définir le projet et préparer l'environnement.
 
 ### Travaux réalisés
+- Définition des objectifs.
+- Choix des technologies.
+- Création de la structure du projet.
+- Initialisation de Git.
 
-* Identification du problème de Machine Learning : classification binaire (candidat compatible / non compatible).
-* Définition du second objectif : classement des candidats selon un score de compatibilité.
-* Identification des données nécessaires :
-   - CV des candidats.
-   - Offres d'emploi.
-   - Données de correspondance (matching).
-* Définition des futures variables d'entrée (features) et de la variable cible (target).
-* Analyse des besoins en données du projet.
-* Étude de plusieurs jeux de données disponibles.
-* Sélection du dataset principal `job_applicant_dataset.csv`.
-* Analyse de sa structure (10 000 enregistrements, 9 colonnes, aucune valeur manquante).
-* Identification des colonnes utiles :
+### À faire
+- Recherche et analyse des jeux de données.
 
-  * Resume
-  * Job Description
-  * Job Roles
-  * Best Match
-* Décision d'écarter les colonnes susceptibles d'introduire des biais :
-  * Gender
-  * Race
-  * Ethnicity
-  * Job Applicant Name
-* Sélection d'un second jeu de données composé de CV au format PDF (français et anglais).
+---
 
-### Décisions prises
+# Jour 2 et 3 — Analyse du problème, conception et sélection des datasets
 
-* Utiliser `job_applicant_dataset.csv` comme dataset principal pour l'entraînement et l'évaluation des modèles.
-* Utiliser les CV PDF pour développer et tester le pipeline réel d'extraction de texte.
-* Construire un pipeline bilingue (français / anglais).
-* Utiliser spaCy avec un modèle adapté à chaque langue.
-* Comparer les modèles de Machine Learning classiques avec DistilBERT.
+**Date : 13/07/2026**
 
-### Architecture des données validée
+### Objectif
+Identifier les besoins du projet, concevoir le pipeline global et sélectionner les jeux de données.
 
+### Travaux réalisés
+- Identification du problème ML : classification binaire (candidat compatible / non compatible).
+- Définition du classement des candidats selon un score de compatibilité.
+- Identification des données nécessaires : CV, offres d'emploi et données de matching.
+- Analyse de plusieurs jeux de données.
+- Sélection de `job_applicant_dataset.csv`.
+- Analyse : 10 000 enregistrements, 9 colonnes, aucune valeur manquante.
+- Colonnes utiles : Resume, Job Description, Job Roles, Best Match.
+- Écart des variables susceptibles d'introduire des biais : Gender, Race, Ethnicity, Job Applicant Name.
+- Sélection d'un second jeu de données de CV PDF français et anglais.
+
+### Architecture validée
 1. CV PDF
 2. Extraction du texte
 3. Prétraitement NLP
 4. Extraction des compétences
 5. Représentation numérique
 6. Machine Learning / DistilBERT
-7. Stockage des résultats dans MySQL
-8. Interface Streamlit
-9. Tableau de bord Power BI
-
-### Difficultés rencontrées
-
-Aucune difficulté majeure.
-
-### Temps de travail
-
-À compléter.
-
-### Compétences acquises
-
-* Évaluation de jeux de données.
-* Sélection de données adaptées à un problème de Machine Learning.
-* Conception d'un pipeline complet de recrutement intelligent.
-* Identification des risques de biais dans les données.
-
-### Leçons apprises
-
-* La qualité des données est aussi importante que le choix des modèles.
-* Les données réelles (CV PDF) permettent de construire une application plus proche des besoins des recruteurs.
-* Il est préférable de définir l'architecture des données avant de commencer le développement.
-
-### À faire (Jour 4)
-
-* Développer le module d'extraction de texte à partir des CV PDF.
-* Comparer plusieurs bibliothèques d'extraction.
-* Choisir la meilleure solution pour le projet.
-
-------------------------------------------------------------------------------------------------------------------------
-
-# Jour 4: Extraction des CV PDF et détection automatique de la langue
-
-## Date14/07/2026
-
-### Objectifs
-
-- Construire un pipeline de prétraitement capable d'extraire automatiquement le texte des CV PDF.
-- Détecter automatiquement la langue des CV (Français / Anglais).
-- Sauvegarder les textes extraits.
-- Générer un fichier de métadonnées pour le suivi des traitements.
+7. MySQL
+8. Interface applicative
+9. Power BI
 
 ---
 
-## Travaux réalisés
+# Jour 4 — Extraction PDF et détection de langue
 
-### 1. Extraction des CV PDF
+**Date : 14/07/2026**
 
-- Intégration de la bibliothèque PyMuPDF.
-- Développement du module `pdf_extraction.py`.
-- Extraction du texte page par page.
-- Sauvegarde automatique des textes au format `.txt`.
+### Travaux réalisés
+- Intégration de PyMuPDF.
+- Création de `pdf_extraction.py`.
+- Extraction page par page.
+- Intégration de `langdetect`.
+- Création de `language_detector.py`.
+- Création de `metadata_manager.py`.
+- Création de `pipeline.py`.
+- Génération de `data/processed/resumes_metadata.csv`.
 
-### 2. Détection automatique de la langue
-
-- Intégration de la bibliothèque `langdetect`.
-- Développement du module `language_detector.py`.
-- Détection automatique des langues :
-  - Français (`fr`)
-  - Anglais (`en`)
-
-### 3. Gestion des métadonnées
-
-Création du module `metadata_manager.py`.
-
-Les informations enregistrées pour chaque CV sont :
-
+### Métadonnées suivies
 - Nom du fichier
 - Langue
 - Nombre de pages
 - Nombre de mots
 - Nombre de caractères
-- Nom du fichier texte généré
+- Fichier texte généré
 - Statut du traitement
 
-Les métadonnées sont sauvegardées dans :
+---
 
-data/processed/resumes_metadata.csv
+# Jour 5 — Prétraitement NLP et CV Parser
 
-### 4. Pipeline de prétraitement
+**Date : 15/07/2026**
 
-Création du module `pipeline.py` permettant d'automatiser :
+### Travaux réalisés
+Création du pipeline NLP :
+- `text_cleaner.py`
+- `tokenizer.py`
+- `stopwords_remover.py`
+- `lemmatizer.py`
+- `preprocessing_pipeline.py`
 
-1. Lecture des CV PDF.
-2. Extraction du texte.
-3. Détection de la langue.
-4. Calcul des statistiques.
-5. Sauvegarde des fichiers texte.
-6. Mise à jour des métadonnées.
+Création du CV Parser :
+- `parser.py`
+- `skill_extractor.py`
+- `education_extractor.py`
+- `experience_extractor.py`
+- `language_extractor.py`
+- `certification_extractor.py`
+- `cv_parser_pipeline.py`
 
-### 5. Organisation du projet
-
-Structure actuelle des modules :
-
-src/
-└── preprocessing/
-    ├── pdf_extraction.py
-    ├── language_detector.py
-    ├── metadata_manager.py
-    └── pipeline.py
+### Résultat
+Les CV sont transformés en JSON structurés contenant notamment :
+- compétences ;
+- formation ;
+- expérience ;
+- langues ;
+- certifications ;
+- langue du document ;
+- statut du parsing.
 
 ---
 
-## Difficultés rencontrées
+# Jour 6 — Job Parser
 
-- Gestion des chemins avec `pathlib`.
-- Configuration des imports Python.
-- Lecture des fichiers CSV vides.
-- Gestion des erreurs lors du traitement des PDF.
+**Date : 17/07/2026**
 
-Toutes les difficultés ont été corrigées.
+### Travaux réalisés
+- Analyse et nettoyage du dataset des offres.
+- Développement de `job_preprocessing.py`.
+- Développement de `job_pipeline.py`.
+- Développement du Job Parser.
+- Prétraitement de 2253 offres.
+- Génération de `jobs_preprocessed.csv`.
+- Génération des JSON dans `data/processed/parsed_jobs/`.
 
----
-
-## Résultat
-
-Le pipeline est désormais capable de traiter automatiquement un dossier contenant plusieurs CV PDF et de produire :
-
-- les fichiers texte extraits ;
-- un fichier de métadonnées centralisé ;
-- des statistiques sur chaque document.
-
-Cette étape constitue la base de tout le pipeline NLP qui sera développé par la suite.
-
----
-
-## Prochaine étape (Jour 5)
-
-Prétraitement NLP :
-
-- Nettoyage des textes
-- Normalisation
-- Suppression des caractères inutiles
-- Tokenisation
-- Suppression des stop words
-- Lemmatisation
-
------------------------------------------------------------------------------------------
-# 📅 JOUR 5 – Prétraitement NLP et Développement du CV Parser
-
-**Date :** 15/07/2026
+### Informations extraites
+- titre ;
+- compétences ;
+- niveau d'études ;
+- expérience ;
+- langues ;
+- certifications.
 
 ---
 
-#  Objectif
+# Jour 7 — Rule-Based Matching Engine
 
-Mettre en place un pipeline complet permettant de transformer automatiquement les CV PDF en données structurées prêtes à être exploitées par les modèles de Machine Learning, Deep Learning et le moteur de Matching.
+**Date : 21/07/2026**
 
----
+### Objectif
+Développer la première version du moteur de matching CV ↔ Job.
 
-#  Travail réalisé
-
-## 1. Prétraitement NLP
-
-Développement du pipeline de prétraitement des textes extraits des CV.
-
-Création des modules :
-
-- text_cleaner.py
-- tokenizer.py
-- stopwords_remover.py
-- lemmatizer.py
-- preprocessing_pipeline.py
-
-Le pipeline réalise automatiquement :
-
-- conversion en minuscules ;
-- suppression des caractères spéciaux ;
-- suppression des ponctuations ;
-- suppression des espaces inutiles ;
-- suppression des chiffres non pertinents ;
-- tokenisation ;
-- suppression des stop words ;
-- lemmatisation.
-
-Tous les CV sont ensuite enregistrés sous forme de fichiers texte nettoyés dans :
-
-```
-data/processed/cleaned_text/
+### Architecture
+```text
+src/matching/
+├── __init__.py
+├── skill_matcher.py
+├── education_matcher.py
+├── experience_matcher.py
+├── language_matcher.py
+├── certification_matcher.py
+├── score_calculator.py
+└── matching_pipeline.py
 ```
 
----
+### Travaux réalisés
+- Skill Matcher.
+- Education Matcher.
+- Experience Matcher.
+- Language Matcher.
+- Certification Matcher.
+- Score global pondéré.
+- Recommandations automatiques.
+- Matching de tous les CV avec les offres.
 
-## 2. Détection automatique de la langue
-
-Mise en place de la détection automatique de la langue (français / anglais) lors du traitement des CV afin de faciliter les étapes suivantes du pipeline.
-
----
-
-## 3. Développement du CV Parser
-
-Création du module :
-
-```
-src/information_extraction/
-```
-
-Développement des composants suivants :
-
-- parser.py
-- skill_extractor.py
-- education_extractor.py
-- experience_extractor.py
-- language_extractor.py
-- certification_extractor.py
-- cv_parser_pipeline.py
+### Poids initiaux
+| Critère | Poids |
+|---|---:|
+| Skills | 45 % |
+| Education | 20 % |
+| Experience | 15 % |
+| Languages | 10 % |
+| Certifications | 10 % |
 
 ---
 
-## 4. Extraction automatique des informations
+# Jour 8 — Dataset Machine Learning et préparation
 
-Développement des extracteurs permettant d'identifier automatiquement :
+### Travaux réalisés
+- Création de `dataset_builder.py`.
+- Construction du dataset ML.
+- Ajout des features de matching.
+- Génération de `best_match`.
+- Création de `data_loader.py`.
+- Création de `dataset_validator.py`.
+- Création de `data_splitter.py`.
+- Création de `feature_scaler.py`.
+- Train/Test Split 80/20.
+- Standardisation avec `StandardScaler`.
 
-- les compétences techniques ;
-- le niveau d'études ;
-- les années d'expérience ;
-- les langues parlées ;
-- les certifications.
+---
 
-Les informations sont ensuite regroupées dans une structure JSON.
+# Jour 9 — Machine Learning Pipeline
 
-Exemple :
+### Travaux réalisés
+- Création de `dataset_builder_v2.py`.
+- Génération de plus de 166 000 couples CV ↔ Job.
+- Feature Engineering :
+  - skills ;
+  - education ;
+  - experience ;
+  - languages ;
+  - certifications ;
+  - TF-IDF similarity ;
+  - cosine/semantic similarity.
+- Génération automatique des labels.
+- Entraînement et comparaison de :
+  - Logistic Regression ;
+  - Decision Tree ;
+  - Random Forest ;
+  - SVM ;
+  - XGBoost.
+- Évaluation avec Accuracy, Precision, Recall, F1, ROC-AUC.
+- Sélection automatique du meilleur modèle.
+- Sauvegarde des modèles et du scaler.
+
+---
+
+# Jour 10 — FastAPI REST API
+
+### Travaux réalisés
+- Mise en place de FastAPI et Uvicorn.
+- Création de l'architecture `src/api`.
+- Configuration centralisée.
+- Schémas Pydantic.
+- Endpoints de santé.
+- Endpoint de prédiction.
+- Batch prediction.
+- Gestion des exceptions.
+- Documentation Swagger et ReDoc.
+- Configuration CORS.
+
+### Résultat
+Le moteur ML est accessible via une API REST.
+
+---
+
+# Jour 11 — MySQL, repositories et intégration Backend
+
+### Objectif
+Connecter SmartHire AI à MySQL et persister les CV, offres et résultats.
+
+### Travaux réalisés
+- Mise en place de MySQL Community Server / MySQL Workbench.
+- Création et adaptation des tables nécessaires au projet.
+- Création des repositories pour les entités principales.
+- Intégration des repositories avec les services FastAPI.
+- Développement des routes d'import et de consultation des CV et offres.
+- Mise en place du stockage des prédictions.
+- Adaptation des modèles et des requêtes SQL à la structure réelle de la base.
+
+### Problèmes rencontrés et corrigés
+- Erreurs de connexion MySQL.
+- Problèmes de service MySQL.
+- Erreurs de colonnes inconnues.
+- `resume_id` absent ou utilisé avec un mauvais nom de colonne.
+- Erreurs de paramètres SQL.
+- Incohérences entre les identifiants Python et les identifiants présents en base.
+- Adaptation de `ResumeRepository.insert()` à la structure réelle de la table.
+
+### Résultat
+La couche de persistance MySQL est intégrée au backend FastAPI.
+
+---
+
+# Jour 12 — Inference / Prediction Engine
+
+### Objectif
+Construire la couche d'inférence permettant de prendre un CV réel et de produire les meilleures correspondances avec les offres.
+
+### Travaux réalisés
+- Mise en place du `PredictionService`.
+- Chargement du modèle ML et du scaler.
+- Génération des features nécessaires à l'inférence.
+- Chargement des embeddings/features des jobs.
+- Comparaison CV ↔ Job.
+- Production de :
+  - prediction ;
+  - probability ;
+  - score ;
+  - job_id ;
+  - job_title.
+- Connexion du moteur de prédiction aux endpoints FastAPI.
+
+### Problèmes rencontrés
+- Incohérence entre `job_id` et `id`.
+- Erreurs de dimension des features.
+- Différence entre le nombre de features attendu par le modèle et celui fourni par le scaler.
+- Gestion des jobs dont l'identifiant réel est `id`.
+- Problèmes de mapping des embeddings.
+
+### Résultat
+Le moteur d'inférence retourne les meilleurs jobs pour un CV réel.
+
+---
+
+# Jour 13 — Candidate Ranking
+
+### Objectif
+Classer les offres selon leur compatibilité avec un CV.
+
+### Travaux réalisés
+- Création/validation de la méthode de ranking des candidats.
+- Tri des prédictions par score.
+- Retour des meilleurs jobs.
+- Ajout du rang.
+- Ajout du score et de la probabilité.
+- Ajout du titre du poste.
+- Test avec le CV `resume_id = 9`.
+
+### Résultat de test
+Le système retourne les 10 meilleures correspondances, par exemple :
+- Quality Data Analyst
+- Reporting Data Analyst
+- Business/Data Analyst (FP&A)
+- Data Analyst - Intex Developer
+- Data Analyst Entry Level
+- Data Analyst
+- Market Data Reporting Analyst
+
+Le ranking fonctionne correctement et les titres des jobs sont maintenant récupérés.
+
+---
+
+# Jour 14 — Job Management Frontend
+
+### Objectif
+Créer une interface web pour consulter et gérer les offres.
+
+### Travaux réalisés
+- Création de la page `Jobs.tsx`.
+- Recherche par titre / entreprise.
+- Filtre par langue.
+- Pagination.
+- Affichage des compétences.
+- Affichage de l'expérience.
+- Navigation vers les détails d'une offre.
+- Création / utilisation de `useJobs()`, `useJob()`, `useUploadJob()` et `useDeleteJob()`.
+- Création de `jobApi.ts`.
+
+### Routes utilisées
+- GET `/job`
+- GET `/job/all`
+- GET `/job/{id}`
+- POST `/job/upload`
+- POST `/job/uploads`
+- DELETE `/job/{id}`
+
+### JobService
+Développement/validation de :
+- `parse_job()`
+- `parse_all_jobs()`
+
+Le service lit les JSON d'offres, génère un identifiant si nécessaire et insère les informations en base.
+
+---
+
+# Jour 15 — Job Details et correction des données frontend
+
+### Objectif
+Afficher correctement les informations détaillées d'une offre.
+
+### Travaux réalisés
+- Création/ajustement de `JobDetails.tsx`.
+- Affichage :
+  - titre ;
+  - entreprise ;
+  - job ID ;
+  - compétences ;
+  - langue ;
+  - expérience ;
+  - description / texte brut.
+- Création/utilisation de `useJob(id)`.
+- Correction de `getJob(id)`.
+
+### Problème rencontré
+L'API retournait une enveloppe :
 
 ```json
 {
-    "filename": "Alix_Lamotte",
-    "language": "english",
-    "skills": [
-        "python",
-        "sql",
-        "power bi"
-    ],
-    "education": [
-        "master"
-    ],
-    "experience_years": 3,
-    "languages": [
-        "english",
-        "french"
-    ],
-    "certifications": [],
-    "parsing_status": "success",
-    "parsed_at": "2026-07-15T20:30:00"
+  "success": true,
+  "job": {
+    "job_title": "Data Analyst",
+    "company": "Celerity",
+    "description": "..."
+  }
 }
 ```
 
----
+alors que le frontend attendait directement l'objet job.
 
-## 5. Pipeline complet de parsing
+### Solution
+Adaptation de `getJob()` pour retourner l'objet `job` contenu dans la réponse API, afin que `JobDetails.tsx` puisse utiliser directement :
+- `job.job_title`
+- `job.company`
+- `job.description`
+- etc.
 
-Développement d'un pipeline permettant de :
-
-- parcourir automatiquement tous les CV prétraités ;
-- appliquer le CV Parser sur chaque CV ;
-- générer un fichier JSON pour chaque CV ;
-- enregistrer les résultats dans :
-
-```
-data/processed/parsed_cv/
-```
+### Résultat
+La page Job Details affiche maintenant les données réelles provenant de FastAPI/MySQL.
 
 ---
 
-## 6. Validation et tests
-
-Tests réalisés sur plusieurs CV en français et en anglais.
-
-Corrections apportées :
-
-- résolution des erreurs d'import Python ;
-- correction des chemins de fichiers ;
-- correction des erreurs liées au traitement des PDF ;
-- amélioration de l'organisation des dossiers ;
-- correction du pipeline de parsing ;
-- amélioration de la gestion des langues.
-
----
-
-#  Structure ajoutée
-
-```
-src/
-├── preprocessing/
-│   ├── text_cleaner.py
-│   ├── tokenizer.py
-│   ├── stopwords_remover.py
-│   ├── lemmatizer.py
-│   └── preprocessing_pipeline.py
-│
-└── information_extraction/
-    ├── parser.py
-    ├── skill_extractor.py
-    ├── education_extractor.py
-    ├── experience_extractor.py
-    ├── language_extractor.py
-    ├── certification_extractor.py
-    └── cv_parser_pipeline.py
-```
-
----
-
-#  Résultats obtenus
-
-À l'issue de cette étape, le projet est capable de :
-
-- extraire automatiquement le texte des CV ;
-- nettoyer et normaliser les textes ;
-- détecter la langue des CV ;
-- extraire les principales informations (compétences, diplômes, expériences, langues et certifications) ;
-- convertir chaque CV en un fichier JSON structuré ;
-- préparer les données pour les prochaines étapes du projet.
-
----
-
-#  Prochaine étape (Jour 6)
-
-Développer le **Job Parser** afin d'extraire automatiquement les informations des offres d'emploi, puis commencer le **Feature Engineering** pour préparer les données destinées aux modèles de Machine Learning et au moteur de Matching.
-
-------------------------------------------------------------------------------------------------------------------------
-
-# JOUR 6 - Prétraitement NLP et Job Parser des offres d'emploi
-
-**Date:** 17/07/2026
-## Objectif
-
-Préparer les offres d'emploi pour la phase de matching en appliquant le pipeline de prétraitement NLP, puis développer un Job Parser capable d'extraire automatiquement les informations importantes de chaque offre et de les convertir en fichiers JSON structurés.
-
----
-
-## Travail réalisé
-
-### 1. Prétraitement des offres d'emploi
-
-- Analyse du dataset des offres d'emploi (`jobs.csv`).
-- Vérification des dimensions, des types de données, des valeurs manquantes et des doublons.
-- Nettoyage du dataset.
-- Réutilisation du pipeline NLP développé pour les CV.
-- Développement du module `job_preprocessing.py`.
-- Développement du pipeline `job_pipeline.py`.
-- Détection et gestion des langues non supportées.
-- Prétraitement des **2253 descriptions d'emploi**.
-- Génération du fichier :
-
-```
-data/processed/job_descriptions/jobs_preprocessed.csv
-```
-
----
-
-### 2. Développement du Job Parser
-
-Création du module :
-
-```
-src/job_parser/
-```
-
-Développement des composants suivants :
-
-- `parser.py`
-- `pipeline.py`
-
-Le Job Parser réutilise les extracteurs déjà développés pour les CV :
-
-- Skill Extractor
-- Education Extractor
-- Experience Extractor
-- Language Extractor
-- Certification Extractor
-
-Chaque offre d'emploi est automatiquement analysée afin d'extraire :
-
-- le titre du poste ;
-- les compétences techniques ;
-- le niveau d'études requis ;
-- les années d'expérience ;
-- les langues demandées ;
-- les certifications.
-
----
-
-### 3. Génération des offres structurées
-
-Développement du pipeline permettant de :
-
-- lire `jobs_preprocessed.csv` ;
-- analyser chaque offre d'emploi ;
-- générer un fichier JSON par offre.
-
-Les fichiers sont enregistrés dans :
-
-```
-data/processed/parsed_jobs/
-```
-
----
-
-##  Nouveaux fichiers développés
-
-```
-src/job_processing/
-    job_preprocessing.py
-    job_pipeline.py
-
-src/job_parser/
-    parser.py
-    pipeline.py
-
-tests/
-    test_job_preprocessing.py
-    test_job_parser.py
-```
-
----
-
-##  Résultats
-
-- Dataset nettoyé et prétraité.
-- 2253 offres d'emploi traitées.
-- Création du fichier `jobs_preprocessed.csv`.
-- Génération des fichiers JSON des offres d'emploi.
-- Pipeline entièrement automatisé pour le traitement des offres.
-
----
-
-##  Compétences acquises
-
-- Prétraitement NLP des descriptions d'emploi.
-- Réutilisation d'un pipeline NLP.
-- Extraction automatique d'informations.
-- Génération de fichiers JSON.
-- Réutilisation de modules entre CV Parser et Job Parser.
-- Organisation modulaire d'un projet Python.
-
----
-
-##  État du projet
-
-Terminés :
-
-- ✔ Structure du projet
-- ✔ Extraction des CV PDF
-- ✔ Détection automatique de la langue
-- ✔ Prétraitement NLP des CV
-- ✔ CV Parser
-- ✔ Prétraitement des offres d'emploi
-- ✔ Job Parser
-
-Le projet est désormais prêt pour la prochaine étape :
-
-➡ **Jour 7 : Développement du moteur de Matching (CV ↔ Job Description)**.
-
----------------------------------------------------------------------------------------------------------
-# Jour 7 -
-
-**Date :** 21 Juillet 2026
-
----
-
-# Objectif du Jour
-
-L'objectif principal de cette journée était de développer la première version du moteur de matching (Rule-Based Matching Engine). Ce moteur compare automatiquement les informations extraites d'un CV avec les exigences d'une offre d'emploi afin de produire un score global de compatibilité et une recommandation.
-
----
-
-# Travaux réalisés
-
-## 1. Création du module Matching
-
-Un nouveau package `matching` a été ajouté dans le projet afin de regrouper tous les composants responsables de la comparaison entre les candidats et les offres d'emploi.
-
-Architecture créée :
-
-```text
-src/
-│
-├── matching/
-│   ├── __init__.py
-│   ├── skill_matcher.py
-│   ├── education_matcher.py
-│   ├── experience_matcher.py
-│   ├── language_matcher.py
-│   ├── certification_matcher.py
-│   ├── score_calculator.py
-│   └── matching_pipeline.py
-```
-
----
-
-## 2. Développement des modules de comparaison
-
-Les modules suivants ont été développés :
-
-### Skill Matcher
-
-* comparaison des compétences du CV avec celles demandées par l'offre ;
-* calcul du pourcentage de compétences correspondantes.
-
-### Education Matcher
-
-* hiérarchie des diplômes implémentée ;
-* prise en charge des listes de diplômes extraites des CV ;
-* sélection automatique du diplôme le plus élevé.
-
-### Experience Matcher
-
-* comparaison des années d'expérience ;
-* score proportionnel lorsque le candidat possède moins d'expérience que celle demandée.
-
-### Language Matcher
-
-* comparaison des langues maîtrisées avec celles exigées.
-
-### Certification Matcher
-
-* comparaison des certifications obtenues avec celles demandées.
-
----
-
-## 3. Calcul du score global
-
-Un calculateur de score pondéré a été développé.
-
-Répartition des poids :
-
-| Critère        | Poids |
-| -------------- | ----: |
-| Skills         |  45 % |
-| Education      |  20 % |
-| Experience     |  15 % |
-| Languages      |  10 % |
-| Certifications |  10 % |
-
-Le moteur génère également une recommandation automatique :
-
-* Highly Recommended
-* Recommended
-* Consider
-* Not Recommended
-
----
-
-## 4. Développement du Matching Pipeline
-
-Le pipeline réalise automatiquement les opérations suivantes :
-
-1. chargement des CV au format JSON ;
-2. chargement des offres d'emploi ;
-3. comparaison des différents critères ;
-4. calcul du score final ;
-5. génération de la recommandation.
-
----
-
-## 5. Automatisation du matching
-
-Le pipeline a été amélioré afin de traiter automatiquement tous les fichiers disponibles.
-
-Il parcourt récursivement :
-
-```text
-data/processed/parsed_CV/
-    ├── english/
-    └── french/
-```
-
-ainsi que toutes les offres présentes dans :
-
-```text
-data/processed/parsed_jobs/
-```
-
-Chaque CV est comparé avec toutes les offres disponibles.
-
----
-
-## 6. Génération des résultats
-
-Les résultats de chaque comparaison sont enregistrés dans :
-
-```text
-data/processed/matching_results/
-```
-
-Chaque résultat contient notamment :
-
-* nom du candidat ;
-* langue du CV ;
-* intitulé du poste ;
-* score des compétences ;
-* score des études ;
-* score de l'expérience ;
-* score des langues ;
-* score des certifications ;
-* score global ;
-* recommandation.
-
----
-
-# Difficultés rencontrées
-
-Plusieurs problèmes techniques ont été identifiés puis corrigés :
-
-* résolution des problèmes d'import Python entre les packages (`src`, `utils`, `matching`) ;
-* adaptation du moteur à la structure réelle des fichiers JSON ;
-* modification du module `education_matcher` pour prendre en charge une liste de diplômes ;
-* remplacement du champ `name` par `filename` dans les CV parsés ;
-* automatisation du parcours des dossiers `english` et `french`.
-
----
-
-# Résultat obtenu
-
-Le moteur Rule-Based est désormais capable de :
-
-* parcourir automatiquement l'ensemble des CV ;
-* comparer chaque CV avec toutes les offres d'emploi ;
-* calculer un score de compatibilité pondéré ;
-* produire une recommandation automatique ;
-* préparer les données pour leur future insertion dans MySQL.
-
----
-
-# Perspectives (Jour 8)
-
-Les prochaines améliorations porteront sur :
-
-* normalisation multilingue des compétences (français/anglais) ;
-* gestion des synonymes ;
-* comparaison approximative (Fuzzy Matching) ;
-* intégration de modèles de Machine Learning ;
-* comparaison sémantique avec DistilBERT ou Sentence Transformers ;
-* stockage des résultats dans MySQL ;
-* classement automatique des meilleurs candidats pour chaque offre.
-
----
-
-# État du projet
-
-**Statut :** ✅ Jour 7 terminé
-
-Le moteur de matching basé sur des règles constitue désormais la première version de l'intelligence de SmartHire AI et servira de base à l'intégration des modèles d'IA dans les prochaines étapes du projet.
-
------------------------------------------------------------------------------------------------
-
-#  Jour 8 — Construction du dataset Machine Learning et préparation des données
-
-##  Objectifs
-
-L'objectif de cette journée était de construire le dataset final destiné au Machine Learning à partir des CV analysés et des offres d'emploi prétraitées, puis de préparer les données pour l'entraînement des modèles de classification.
-
----
-
-##  Tâches réalisées
-
-### 1. Construction du dataset Machine Learning
-
-Développement du module `dataset_builder.py` permettant de générer automatiquement un dataset de Machine Learning à partir des CV et des offres d'emploi.
-
-Fonctionnalités implémentées :
-
-- Chargement du dataset `job_applicant_dataset.csv`.
-- Prétraitement automatique des CV et des descriptions d'emploi.
-- Intégration du CV Parser.
-- Intégration du Job Parser.
-- Calcul automatique des scores de compatibilité entre un candidat et une offre.
-
-Les caractéristiques (features) calculées sont :
-
-- Skill Matching Score
-- Education Matching Score
-- Experience Matching Score
-- Language Matching Score
-- Certification Matching Score
-- Final Matching Score
-
-Ajout de la variable cible :
-
-- Best Match (0 / 1)
-
----
-
-### 2. Génération du dataset final
-
-Création du dataset :
-
-```
-data/processed/machine_learning/matching_dataset.csv
-```
-
-Contenu du dataset :
-
-- 10 000 échantillons
-- 9 colonnes
-- Aucune valeur manquante
-- Aucun doublon
-
-Colonnes :
-
-- resume_id
-- job_title
-- skill_score
-- education_score
-- experience_score
-- language_score
-- certification_score
-- final_score
-- best_match
-
----
-
-### 3. Validation du dataset
-
-Développement des modules :
-
-- `data_loader.py`
-- `dataset_validator.py`
-
-Contrôles effectués :
-
-- Chargement du dataset
-- Vérification des dimensions
-- Vérification des colonnes
-- Vérification des types de données
-- Détection des valeurs manquantes
-- Détection des doublons
-
-Toutes les validations ont été réalisées avec succès.
-
----
-
-### 4. Préparation des données Machine Learning
-
-Développement des modules :
-
-- `data_splitter.py`
-- `feature_scaler.py`
-
-Fonctionnalités implémentées :
-
-- Séparation des données en ensembles d'entraînement et de test (80 % / 20 %).
-- Suppression des colonnes non utilisées pour l'entraînement (`resume_id` et `job_title`).
-- Normalisation des variables numériques avec `StandardScaler`.
-
-Résultats obtenus :
-
-- Train Set : 8000 échantillons
-- Test Set : 2000 échantillons
-
-Le pipeline de préparation des données est désormais entièrement opérationnel.
-
----
-
-### 5. Tests réalisés
-
-Création des scripts de test :
-
-- `test_dataset_builder.py`
-- `test_ml_preparation.py`
-
-Résultats :
-
-- Génération correcte du dataset Machine Learning.
-- Validation complète des données.
-- Séparation Train/Test réussie.
-- Normalisation des variables sans erreur.
-
-Tous les tests ont été validés avec succès.
-
----
-
-##  Nouveaux fichiers créés
-
-```
-src/
-└── machine_learning/
-    ├── dataset_builder.py
-    ├── data_loader.py
-    ├── dataset_validator.py
-    ├── data_splitter.py
-    └── feature_scaler.py
-
-tests/
-├── test_dataset_builder.py
-└── test_ml_preparation.py
-```
-
----
-
-##  Résultat de la journée
-
-À l'issue de cette journée, SmartHire AI dispose d'une pipeline complète permettant :
-
-- de construire automatiquement un dataset de Machine Learning ;
-- d'extraire les caractéristiques de matching entre un CV et une offre d'emploi ;
-- de générer une variable cible (`best_match`) ;
-- de valider la qualité des données ;
-- de préparer les données pour l'entraînement des modèles de Machine Learning.
-
-Le projet est désormais prêt pour la phase d'entraînement et d'évaluation des modèles de classification.
-
----
-
-##  Prochaine étape
-
-Jour 9 :
-
-- Développement des premiers modèles de Machine Learning.
-- Entraînement de Logistic Regression.
-- Évaluation des performances (Accuracy, Precision, Recall, F1-score et ROC-AUC).
-- Comparaison avec d'autres modèles (Decision Tree, Random Forest, SVM et XGBoost).
-- Sauvegarde automatique du meilleur modèle.
-
------------------------------------------------------------------------------------------
-
-# AI Recruitment Platform - PROJECT LOG
-
-## Jour 9 : Machine Learning Pipeline & Model Training
+# Jour 16 — Analytics
 
 ### Objectif
-Mettre en place un pipeline complet de Machine Learning pour entraîner, comparer et sélectionner automatiquement le meilleur modèle de prédiction du matching entre un CV et une offre d'emploi.
+Créer une API d'analyse globale du système et préparer la visualisation des statistiques.
+
+### Endpoint
+GET `/analytics`
+
+### Données retournées
+```json
+{
+  "total_resumes": 69,
+  "total_jobs": 2253,
+  "total_predictions": 8573,
+  "average_score": 13.88,
+  "successful_predictions": 1192,
+  "languages": [
+    {"language": "en", "total": 39},
+    {"language": "fr", "total": 29},
+    {"language": "unknown", "total": 1}
+  ],
+  "top_jobs": [],
+  "score_distribution": []
+}
+```
+
+### Travaux réalisés
+- Création de `analyticsApi.ts`.
+- Définition de `AnalyticsData`.
+- Connexion frontend ↔ endpoint `/analytics`.
+- Préparation des statistiques :
+  - nombre de CV ;
+  - nombre d'offres ;
+  - nombre de prédictions ;
+  - score moyen ;
+  - prédictions réussies ;
+  - répartition des langues ;
+  - jobs les plus demandés ;
+  - distribution des scores.
+- Correction de problèmes liés à l'affichage avec MUI Grid.
+
+### Résultat
+L'API Analytics fonctionne et retourne les statistiques globales de SmartHire AI.
 
 ---
 
-## Travaux réalisés
+# Jour 17 — Dashboard principal
 
-### 1. Construction du dataset Machine Learning
+### Objectif
+Construire le tableau de bord principal de SmartHire AI.
 
-- Création du générateur `dataset_builder_v2.py`.
-- Chargement récursif des CV JSON (`parsed_CV`).
-- Chargement récursif des offres JSON (`parsed_jobs`).
-- Génération de toutes les combinaisons CV ↔ Offre.
-- Construction d'un dataset contenant plus de **166 000 couples CV/Job**.
+### Travaux réalisés
+- Création/ajustement de `Dashboard.tsx`.
+- Connexion à l'API Analytics.
+- Création de cartes KPI.
+- Affichage du nombre de CV.
+- Affichage du nombre d'offres.
+- Affichage du nombre de prédictions.
+- Affichage du score moyen.
+- Visualisation de la répartition des langues.
+- Visualisation de la distribution des scores.
+- Affichage des jobs les plus performants / demandés.
+- Adaptation de l'interface MUI et correction des problèmes liés à `Grid`.
 
----
-
-### 2. Feature Engineering
-
-Création de nouvelles caractéristiques utilisées pour l'entraînement :
-
-- Skill Features
-- Education Features
-- Experience Features
-- Language Features
-- Certification Features
-- TF-IDF Similarity
-- Cosine Similarity
-
-Toutes les features sont regroupées dans un Feature Builder unique.
+### Résultat
+Le dashboard principal permet maintenant de suivre l'activité globale de SmartHire AI.
 
 ---
 
-### 3. Génération automatique des labels
+# Jour 18 — Prediction Page et Ranking UI
 
-Création d'un générateur de labels basé sur des règles métier.
+### Objectif
+Permettre à l'utilisateur de sélectionner un CV et de lancer le moteur de matching depuis l'interface web.
 
-Calcul :
+### Travaux réalisés
+- Création/ajustement de `Prediction.tsx`.
+- Sélection d'un CV.
+- Bouton `Run Prediction`.
+- Appel de POST `/predictions/{resume_id}`.
+- Affichage des étapes de traitement :
+  - extraction des features ;
+  - calcul de la similarité sémantique ;
+  - scoring ;
+  - ranking.
+- Affichage du meilleur match.
+- Affichage de la liste des prédictions via `PredictionTable`.
+- Ajout de la probabilité.
+- Ajout du score.
+- Ajout du nombre de matches.
+- Gestion des états :
+  - loading ;
+  - aucun résultat ;
+  - aucun match ;
+  - résultats disponibles.
+- Création/validation de `predictionApi.ts`.
+- Création/validation de `usePrediction.ts`.
 
-- Final Score
-- Best Match (0 / 1)
-- Recommendation
+### Endpoints
+- POST `/predictions/{resume_id}`
+- GET `/predictions/{resume_id}`
 
-Distribution obtenue :
+### Résultat
+La prédiction fonctionne depuis le frontend et retourne les jobs classés selon leur score.
 
-- Positive : ≈22 %
-- Negative : ≈78 %
-
----
-
-### 4. Préparation des données
-
-Développement du pipeline de préparation :
-
-- Chargement du dataset
-- Validation des données
-- Sélection des variables
-- Train/Test Split
-- Feature Scaling (StandardScaler)
-
-Le scaler est automatiquement sauvegardé dans :
-
-artifacts/models/scaler.pkl
-
----
-
-### 5. Développement des modèles
-
-Implémentation des modèles :
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Support Vector Machine (SVM)
-- XGBoost
-
-Chaque modèle possède son propre module de création.
+### Décision
+La partie XAI n'est pas incluse dans le frontend actuel afin de terminer les fonctionnalités principales du projet.
 
 ---
 
-### 6. Pipeline d'entraînement
-
-Création d'un Trainer générique capable de :
-
-- entraîner n'importe quel modèle ;
-- mesurer le temps d'entraînement ;
-- réutiliser le même pipeline pour tous les modèles.
-
----
-
-### 7. Évaluation automatique
-
-Développement d'un Evaluator générique.
-
-Calcul automatique de :
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Confusion Matrix
-- Classification Report
-
----
-
-### 8. Sélection automatique du meilleur modèle
-
-Création du système :
-
-- Comparison Table
-- LeaderBoard
-- Model Selector
-
-Fonctionnalités :
-
-- comparaison automatique de tous les modèles ;
-- sélection du meilleur selon le F1-Score.
-
----
-
-### 9. Sauvegarde des résultats
-
-Développement :
-
-ResultSaver
-
-Sauvegarde automatique de :
-
-- model_comparison.csv
-- classification reports
-- confusion matrices
-
----
-
-### 10. Sauvegarde des modèles
-
-Développement :
-
-ModelSaver
-
-Sauvegarde automatique de :
-
-- best_model.pkl
-- scaler.pkl
-
----
-
-## Résultat
-
-Pipeline Machine Learning complet :
-
-Dataset
-↓
-Feature Engineering
-↓
-Train/Test Split
-↓
-Scaling
-↓
-Training
-↓
-Evaluation
-↓
-Model Comparison
-↓
-Best Model Selection
-↓
-Artifacts Saving
-
-Le projet dispose désormais d'une architecture modulaire, réutilisable et proche des standards industriels pour l'entraînement et l'évaluation de modèles de Machine Learning.
-
-------------------------------------------------------------------------------------
-
-## Day 10 – REST API Development with FastAPI
-
-
-
-## Objective
-
-Transformer le moteur d'inférence développé lors des jours précédents en une API REST professionnelle afin de permettre à des applications externes (Web, Mobile, Power BI ou autres services) d'interagir avec SmartHire AI.
-
----
-
-## Tasks Completed
-
-### Sprint 10.1 – FastAPI Setup
-
-* Installation de FastAPI et Uvicorn
-* Création du module `src/api`
-* Initialisation de l'application REST
-* Configuration de la structure du projet
-
----
-
-### Sprint 10.2 – API Configuration
-
-* Création du fichier `config.py`
-* Centralisation des paramètres de l'application
-* Configuration des informations de l'API :
-
-  * Nom
-  * Version
-  * Description
-* Configuration du middleware CORS
-
----
-
-### Sprint 10.3 – Request & Response Schemas
-
-Création des modèles Pydantic :
-
-* ResumeSchema
-* JobSchema
-* PredictionRequest
-* PredictionResponse
-* BatchPredictionRequest
-
-Validation automatique des données reçues par l'API.
-
----
-
-### Sprint 10.4 – Health Endpoint
-
-Création des routes :
-
-* GET `/`
-* GET `/health`
-
-Vérification de l'état de fonctionnement de l'API.
-
----
-
-### Sprint 10.5 – Prediction Endpoint
-
-Création du endpoint :
-
-* POST `/predict`
-
-Fonctionnalités :
-
-* Validation des données
-* Génération des features
-* Chargement automatique du modèle
-* Prédiction ML
-* Retour des résultats :
-
-  * Prediction
-  * Probability
-  * Match Score
-  * Confidence
-  * Recommendation
-
----
-
-### Sprint 10.6 – Batch Prediction
-
-Création du endpoint :
-
-* POST `/batch-predict`
-
-Fonctionnalités :
-
-* Prédiction de plusieurs CV
-* Comparaison avec plusieurs offres
-* Génération automatique des résultats en lot
-
----
-
-### Sprint 10.7 – Exception Handling
-
-Gestion centralisée des erreurs :
-
-* ValueError
-* Internal Server Error
-* Réponses HTTP standardisées
-* Messages d'erreur explicites
-
----
-
-### Sprint 10.8 – API Documentation
-
-Documentation automatique générée par FastAPI :
-
-* Swagger UI (`/docs`)
-* ReDoc (`/redoc`)
-
-Tests interactifs des endpoints sans développement frontend.
-
----
-
-## New Files
+# Jour 19 — Upload et parsing des CV depuis le frontend
+
+### Objectif
+Finaliser le flux d'entrée utilisateur : importer un CV PDF, le parser et afficher les données extraites.
+
+### Travaux réalisés
+- Création/ajustement de `UploadResume.tsx`.
+- Upload de fichiers PDF.
+- Validation du type de fichier.
+- Limite de taille à 5 MB.
+- Drag & Drop.
+- Barre de progression.
+- Simulation visuelle des étapes de parsing.
+- Affichage du résultat du parsing.
+- Affichage des :
+  - compétences ;
+  - formations ;
+  - années d'expérience ;
+  - langues ;
+  - certifications ;
+  - texte brut.
+- Navigation vers :
+  - Run AI Matching ;
+  - View Resume ;
+  - Upload Another.
+- Gestion des erreurs avec `react-hot-toast`.
+
+### Résultat
+Le parcours utilisateur principal est maintenant disponible :
 
 ```text
-src/api/
-│
-├── __init__.py
-├── app.py
-├── config.py
-├── routes.py
-├── schemas.py
-├── dependencies.py
-└── exception_handlers.py
+Upload CV
+   ↓
+Extraction / Parsing
+   ↓
+CV structuré
+   ↓
+Run AI Matching
+   ↓
+Predictions
+   ↓
+Ranking des jobs
 ```
 
 ---
 
-## Features Added
+# État actuel du projet
 
-* REST API Architecture
-* FastAPI Integration
-* Automatic Request Validation
-* Automatic Response Serialization
-* Prediction Endpoint
-* Batch Prediction Endpoint
-* Health Check Endpoint
-* Exception Handling
-* Swagger Documentation
-* ReDoc Documentation
-* CORS Configuration
+## Backend
+- CV Parsing ✅
+- NLP Pipeline ✅
+- Job Parsing ✅
+- Matching Rule-Based ✅
+- Feature Engineering ✅
+- Dataset ML ✅
+- Training ML ✅
+- Model Evaluation ✅
+- Inference Engine ✅
+- Candidate Ranking ✅
+- FastAPI REST API ✅
+- MySQL Integration ✅
+- Analytics API ✅
 
----
-
-## Technologies Used
-
-* FastAPI
-* Uvicorn
-* Pydantic
-* Starlette
-* Machine Learning Pipeline
-* Scikit-Learn
-
----
-
-## Project Status
-
-* CV Parsing ✅
-* Job Parsing ✅
-* NLP Pipeline ✅
-* Feature Engineering ✅
-* Dataset Builder ✅
-* Label Generation ✅
-* Machine Learning Training ✅
-* Model Evaluation ✅
-* Inference Engine ✅
-* REST API ✅
+## Frontend
+- Upload Resume ✅
+- Resume Parsing Preview ✅
+- Job Management ✅
+- Job Details ✅
+- Candidate Ranking ✅
+- Prediction Page ✅
+- Analytics ✅
+- Dashboard principal ✅
+- XAI ⏸️ volontairement non inclus pour le moment
 
 ---
 
-## Next Step (Day 11)
+# Flux fonctionnel actuel
 
-Implémentation de la couche Base de Données :
-
-* Conception de la base MySQL
-* Création des tables
-* Connexion SQLAlchemy
-* CRUD Repository
-* Sauvegarde des CV
-* Sauvegarde des offres
-* Historique des prédictions
-* Gestion des utilisateurs
-* Intégration complète entre FastAPI et MySQL
+```text
+                    SMART HIRE AI
+                         │
+                         ▼
+                 Upload Resume PDF
+                         │
+                         ▼
+                 CV Parsing / NLP
+                         │
+                         ▼
+                Structured Candidate
+                         │
+                         ▼
+                  Run Prediction
+                         │
+                         ▼
+               Feature Generation
+                         │
+                         ▼
+                 ML Inference
+                         │
+                         ▼
+              CV ↔ Job Comparison
+                         │
+                         ▼
+                  Candidate Ranking
+                         │
+                         ▼
+              Top Matching Jobs
+                         │
+          ┌──────────────┴──────────────┐
+          ▼                             ▼
+     Dashboard                      Job Details
+          │
+          ▼
+       Analytics
+```
 
 ---
 
-## Conclusion
+# Dernières validations
 
-Le moteur SmartHire AI est désormais accessible via une API REST moderne. Toutes les fonctionnalités de prédiction peuvent être utilisées par une application web, mobile ou un service externe grâce aux endpoints sécurisés et documentés automatiquement.
+### Analytics API
+Validation effectuée avec :
+- Total resumes : 69
+- Total jobs : 2253
+- Total predictions : 8573
+- Average score : 13.88
+- Successful predictions : 1192
+- CV English : 39
+- CV French : 29
+- Unknown : 1
 
---------------------------------------------------------------------------------------------
+### Ranking
+Validation effectuée avec `resume_id = 9`.
 
+Le système retourne actuellement 10 meilleures correspondances avec :
+- rank ;
+- resume_id ;
+- job_id ;
+- job_title ;
+- prediction ;
+- probability ;
+- score.
+
+---
+
+# Prochaine étape immédiate
+
+Priorité avant la finalisation du projet :
+
+1. Tester tout le parcours frontend de bout en bout.
+2. Vérifier les erreurs restantes.
+3. Vérifier les routes React.
+4. Vérifier les endpoints FastAPI.
+5. Vérifier la cohérence MySQL.
+6. Finaliser le Dashboard.
+7. Ajouter éventuellement les dernières améliorations UI.
+8. Faire un test complet avec plusieurs CV.
+9. Nettoyer le code.
+10. Créer le commit Git final et pousser sur GitHub.
+
+---
+
+# Git — Commit recommandé
+
+## Commit pour les dernières fonctionnalités
+
+```bash
+git add .
+git commit -m "feat: complete recruitment dashboard, analytics, predictions and ranking"
+git push origin main
+```
+
+## Si l'on veut un commit plus précis
+
+```bash
+git add .
+git commit -m "feat: add analytics dashboard and candidate job ranking"
+git push origin main
+```
+
+## Vérification avant commit
+
+```bash
+git status
+git diff --stat
+git log --oneline -5
+```
+
+---
+
+# Projet — Statut global
+
+**SmartHire AI est maintenant dans la phase de finalisation.**
+
+Les composants essentiels sont opérationnels :
+
+**Data → NLP → Parsing → Matching → ML → Inference → Ranking → FastAPI → MySQL → Frontend → Dashboard**
+
+La priorité est désormais la stabilisation, les tests de bout en bout et la préparation de la version finale.

@@ -22,6 +22,41 @@ from src.matching.feature_engineering.similarity_features import (
     compute_similarity_features
 )
 
+def build_text(document: dict) -> str:
+
+    parts = []
+
+    # Skills
+    parts.extend(document.get("skills", []))
+
+    # Education
+    education = document.get("education", [])
+
+    if isinstance(education, list):
+        parts.extend(education)
+    else:
+        parts.append(str(education))
+
+    # Languages
+    parts.extend(document.get("languages", []))
+
+    # Certifications
+    parts.extend(document.get("certifications", []))
+
+    # Experience
+    parts.append(
+        f"{document.get('experience_years', 0)} years experience"
+    )
+
+    # Job title (uniquement pour les offres)
+    if "job_title" in document:
+        parts.append(document["job_title"])
+
+    # cleaned_text s'il existe
+    if document.get("cleaned_text"):
+        parts.append(document["cleaned_text"])
+
+    return " ".join(str(x) for x in parts if x)
 
 def build_features(
     resume: dict,
@@ -114,16 +149,20 @@ def build_features(
     # Similarity
     # ---------------------------------------------------
 
-    """features.update(
+    resume_text = build_text(resume)
+
+    job_text = build_text(job)
+
+    features.update(
 
         compute_similarity_features(
 
-            resume.get("raw_text", ""),
+                resume_text,
 
-            job.get("description", "")
+                job_text
 
         )
 
-    )"""
+    )
 
     return features
